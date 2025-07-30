@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contactForm.addEventListener("submit", function (e) {
       console.log("Contact form submitted!");
+      e.preventDefault(); // Prevent default form submission
 
       // Get form data
       const formData = new FormData(this);
@@ -217,13 +218,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Simple validation
       if (!name || !email || !subject || !message) {
-        e.preventDefault();
         showNotification("Please fill in all fields", "error");
         return;
       }
 
       if (!isValidEmail(email)) {
-        e.preventDefault();
         showNotification("Please enter a valid email address", "error");
         return;
       }
@@ -234,18 +233,38 @@ document.addEventListener("DOMContentLoaded", () => {
       submitBtn.textContent = "Sending...";
       submitBtn.disabled = true;
 
-      // Let Formspree handle the submission
-      console.log("Formspree will handle the email submission");
-
-      // Show success message after a short delay (Formspree will redirect)
-      setTimeout(() => {
-        showNotification(
-          "Message sent successfully! I'll get back to you soon.",
-          "success"
-        );
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 2000);
+      // Submit to Formspree using fetch
+      fetch("https://formspree.io/f/mgvzygrj", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          console.log("Formspree response:", response);
+          if (response.ok) {
+            showNotification(
+              "Message sent successfully! I'll get back to you soon.",
+              "success"
+            );
+            this.reset(); // Clear the form
+          } else {
+            throw new Error("Failed to send message");
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending message:", error);
+          showNotification(
+            "Failed to send message. Please try again or contact me directly.",
+            "error"
+          );
+        })
+        .finally(() => {
+          // Reset button state
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        });
     });
   }
 
