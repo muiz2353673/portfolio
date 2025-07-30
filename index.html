@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">Portfolio</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn" class="theme-btn">
+            <i class="fas fa-sun" id="sun-icon"></i>
+            <i class="fas fa-moon" id="moon-icon"></i>
+          </button>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Abdul Muiz Munshi</span>
+          </h1>
+          <p class="hero-subtitle">
+            First Class Honours CS Graduate & Full Stack Developer
+          </p>
+          <p class="hero-description">
+            Motivated and adaptable Computer Science graduate with First Class
+            Honours from University of Huddersfield. Experienced in building
+            user-friendly web applications through university projects and
+            internships. Comfortable working both independently and in teams,
+            with a strong willingness to learn new tools and technologies.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a
+              href="https://drive.google.com/file/d/1V-6aWSi2RcW_APA-nr4DKSexcfFbvSKZ/view?usp=share_link"
+              class="btn btn-resume"
+              id="download-resume-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-download"></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#about">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a Computer Science graduate with First Class Honours from the
+              University of Huddersfield, seeking opportunities to apply
+              problem-solving and teamwork skills in software development. My
+              journey in tech started with curiosity and has evolved into a
+              passion for building innovative, real-world solutions in a
+              supportive and fast-paced environment.
+            </p>
+            <p>
+              When I'm not coding, you can find me playing badminton, playing
+              Ultimate Frisbee or completing high-altitude expeditions with the
+              Skiing & Hiking Club. I'm fluent in 6+ programming languages and
+              never stop learning new tools and technologies.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <h3>6+</h3>
+                <p>Programming Languages</p>
+              </div>
+              <div class="stat">
+                <h3>First Class</h3>
+                <p>Honours Degree</p>
+              </div>
+              <div class="stat">
+                <h3>4+</h3>
+                <p>Years Experience</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="image-placeholder">
+              <i class="fas fa-code"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-microsoft"></i>
+                <span>C#</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>C++</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Frameworks & Libraries</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>Tailwind CSS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-spring"></i>
+                <span>Spring Boot</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Data & Analytics</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Pandas</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>NumPy</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Matplotlib</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Seaborn</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-brain"></i>
+                <span>Scikit-learn</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Tableau</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-table"></i>
+                <span>Excel</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-book"></i>
+                <span>Jupyter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Cloud & DevOps</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>REST APIs</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-users"></i>
+                <span>Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>IoT & Embedded</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-microchip"></i>
+                <span>Arduino</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-sensor"></i>
+                <span>Sensor Integration</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-cube"></i>
+                <span>Fusion 360</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-microchip"></i>
+                <span>PCB Design</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-wifi"></i>
+                <span>IoT Simulation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Software & Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-microsoft"></i>
+                <span>Microsoft Office</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>VS Code</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-microchip"></i>
+                <span>Arduino IDE</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <span>IT Hardware Support</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-headset"></i>
+                <span>Help Desk Support</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-cogs"></i>
+                <span>Service Desk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-leaf"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Spring Boot Application</h3>
+              <p>
+                A comprehensive Spring Boot application demonstrating modern
+                Java development practices, RESTful APIs, and enterprise-level
+                architecture patterns.
+              </p>
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/spring-boot"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-brain"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Netflix Movie Recommender</h3>
+              <p>
+                A machine learning-based movie recommendation system that
+                analyzes user preferences and provides personalized movie
+                suggestions using advanced algorithms.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Data Science</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Netflix-movie-recommender"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-server"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Server Performance Stats</h3>
+              <p>
+                A comprehensive server monitoring and performance analytics
+                system that tracks server metrics, provides real-time
+                statistics, and generates performance reports.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>System Monitoring</span>
+                <span>Analytics</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/server-performance-stats"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Event Tracker Application</h3>
+              <p>
+                A comprehensive event management system built with modern web
+                technologies, featuring event creation, tracking, and user
+                management capabilities.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Web Development</span>
+                <span>Event Management</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Event_app"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-hotel"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Hotel Cancellation Prediction</h3>
+              <p>
+                A data science project that predicts hotel booking cancellations
+                using machine learning models to help hotels optimize their
+                booking strategies.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Data Science</span>
+                <span>Predictive Analytics</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Hotel-cancellation-prediction-"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's work together!</h3>
+            <p>
+              I'm always interested in new opportunities and exciting projects.
+              Feel free to reach out if you'd like to collaborate or just want
+              to say hello.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Huddersfield, UK 🇬🇧</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>muizmunshi@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+44 07818307416</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>BSc (Hons) Computer Science - First Class Honours</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://github.com/muiz2353673"
+                class="social-link"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="mailto:muizmunshi@gmail.com"
+                class="social-link"
+                title="Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+4407818307416" class="social-link" title="Phone">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Abdul Muiz Munshi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
