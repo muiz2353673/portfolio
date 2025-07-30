@@ -173,6 +173,25 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* Ensure hamburger is visible in dark mode */
+[data-theme="dark"] .bar {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Hamburger animation when active */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Theme Toggle */
 .theme-toggle {
   display: flex;
@@ -319,8 +338,14 @@ body {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes glow {
@@ -1105,6 +1130,14 @@ section {
     padding: 2rem 0;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  /* Better visibility for mobile menu in dark mode */
+  [data-theme="dark"] .nav-menu {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
   }
 
   .nav-menu.active {
@@ -1121,12 +1154,26 @@ section {
     transition: all 0.3s ease;
   }
 
+  /* Better text visibility in dark mode */
+  [data-theme="dark"] .nav-menu .nav-link {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
   .nav-menu .nav-link:hover {
     color: var(--accent-primary);
     background: rgba(66, 153, 225, 0.1);
     border-bottom: 1px solid var(--accent-primary);
     transform: none;
     text-shadow: none;
+  }
+
+  /* Better hover visibility in dark mode */
+  [data-theme="dark"] .nav-menu .nav-link:hover {
+    color: #4299e1;
+    background: rgba(66, 153, 225, 0.2);
+    border-bottom: 1px solid #4299e1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
 
   .nav-menu .nav-link::after {
