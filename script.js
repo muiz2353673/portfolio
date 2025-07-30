@@ -143,6 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contact form handling
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
+  // Initialize EmailJS
+  emailjs.init("iyunlSOiv56Xlhycv"); // Your actual EmailJS public key
+
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -164,12 +167,48 @@ if (contactForm) {
       return;
     }
 
-    // Simulate form submission
-    showNotification(
-      "Message sent successfully! I'll get back to you soon.",
-      "success"
-    );
-    this.reset();
+    // Show loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    // Prepare email template parameters
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message,
+      to_email: "muizmunshi@gmail.com", // Your email address
+    };
+
+    // Send email using EmailJS
+    console.log("Attempting to send email with params:", templateParams);
+    emailjs
+      .send("service_z4igei9", "template_1yq29pw", templateParams)
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          showNotification(
+            "Message sent successfully! I'll get back to you soon.",
+            "success"
+          );
+          contactForm.reset();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          console.log("Error details:", error.text);
+          showNotification(
+            "Failed to send message. Please try again or contact me directly.",
+            "error"
+          );
+        }
+      )
+      .finally(function () {
+        // Reset button state
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
   });
 }
 
