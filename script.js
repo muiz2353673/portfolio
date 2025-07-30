@@ -323,6 +323,10 @@ function showNotification(message, type = "info") {
 // Typing animation for hero title
 function typeWriter(element, text, speed = 100) {
   let i = 0;
+  // Store the original HTML structure
+  const originalHTML = element.innerHTML;
+
+  // Clear and start typing
   element.innerHTML = "";
 
   function type() {
@@ -330,6 +334,11 @@ function typeWriter(element, text, speed = 100) {
       element.innerHTML += text.charAt(i);
       i++;
       setTimeout(type, speed);
+    } else {
+      // Restore the original HTML structure after typing is complete
+      setTimeout(() => {
+        element.innerHTML = originalHTML;
+      }, 500);
     }
   }
 
@@ -340,10 +349,17 @@ function typeWriter(element, text, speed = 100) {
 document.addEventListener("DOMContentLoaded", () => {
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    setTimeout(() => {
-      typeWriter(heroTitle, originalText, 50);
-    }, 1000);
+    // Temporarily disable typing animation to ensure name displays properly
+    console.log("Hero title content:", heroTitle.textContent);
+    console.log("Hero title HTML:", heroTitle.innerHTML);
+    
+    // Uncomment the lines below to re-enable typing animation
+    // const originalText = heroTitle.textContent;
+    // if (originalText && originalText.trim() !== "") {
+    //   setTimeout(() => {
+    //     typeWriter(heroTitle, originalText, 50);
+    //   }, 1000);
+    // }
   }
 });
 
