@@ -322,26 +322,40 @@ function showNotification(message, type = "info") {
 
 // Typing animation for hero title
 function typeWriter(element, text, speed = 100) {
+  console.log("typeWriter function called");
+  console.log("Element:", element);
+  console.log("Text:", text);
+  console.log("Speed:", speed);
+  
   let i = 0;
   // Store the original HTML structure
   const originalHTML = element.innerHTML;
-
+  console.log("Original HTML:", originalHTML);
+  
+  // Create a simple version for typing
+  const simpleText = "Hi, I'm Abdul Muiz Munshi";
+  console.log("Simple text to type:", simpleText);
+  
   // Clear and start typing
   element.innerHTML = "";
+  console.log("Cleared element, starting typing...");
 
   function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
+    if (i < simpleText.length) {
+      element.innerHTML += simpleText.charAt(i);
+      console.log("Typed character:", simpleText.charAt(i));
       i++;
       setTimeout(type, speed);
     } else {
+      console.log("Typing complete, adding cursor...");
       // Add cursor effect at the end
       element.innerHTML += '<span class="typing-cursor">|</span>';
-
+      
       // Restore the original HTML structure after typing is complete
       setTimeout(() => {
+        console.log("Restoring original HTML...");
         element.innerHTML = originalHTML;
-      }, 1500); // Wait a bit longer before restoring
+      }, 2000); // Wait longer before restoring
     }
   }
 
@@ -354,14 +368,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (heroTitle) {
     console.log("Hero title content:", heroTitle.textContent);
     console.log("Hero title HTML:", heroTitle.innerHTML);
+    console.log("Starting typing animation...");
 
     // Re-enable typing animation with better implementation
     const originalText = heroTitle.textContent;
     if (originalText && originalText.trim() !== "") {
       setTimeout(() => {
+        console.log("Executing typeWriter function...");
         typeWriter(heroTitle, originalText, 50);
       }, 1000);
+    } else {
+      console.log("No text content found in hero title");
     }
+  } else {
+    console.log("Hero title element not found");
   }
 });
 
