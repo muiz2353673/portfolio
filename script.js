@@ -1,3 +1,6 @@
+// Test if JavaScript is working
+console.log("JavaScript is loaded and working!");
+
 // Theme Toggle Functionality
 const themeToggleBtn = document.getElementById("theme-toggle-btn");
 const body = document.body;
@@ -143,6 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contact form handling
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
+  console.log("Contact form found!");
+
   // Check if EmailJS is loaded
   if (typeof emailjs === "undefined") {
     console.error("EmailJS is not loaded!");
@@ -164,6 +169,7 @@ if (contactForm) {
   }
 
   contactForm.addEventListener("submit", function (e) {
+    console.log("Contact form submitted!");
     e.preventDefault();
 
     // Get form data
@@ -172,6 +178,8 @@ if (contactForm) {
     const email = formData.get("email");
     const subject = formData.get("subject");
     const message = formData.get("message");
+    
+    console.log("Form data:", { name, email, subject, message });
 
     // Simple validation
     if (!name || !email || !subject || !message) {
@@ -326,16 +334,16 @@ function typeWriter(element, text, speed = 100) {
   console.log("Element:", element);
   console.log("Text:", text);
   console.log("Speed:", speed);
-  
+
   let i = 0;
   // Store the original HTML structure
   const originalHTML = element.innerHTML;
   console.log("Original HTML:", originalHTML);
-  
+
   // Create a simple version for typing
   const simpleText = "Hi, I'm Abdul Muiz Munshi";
   console.log("Simple text to type:", simpleText);
-  
+
   // Clear and start typing
   element.innerHTML = "";
   console.log("Cleared element, starting typing...");
@@ -350,7 +358,7 @@ function typeWriter(element, text, speed = 100) {
       console.log("Typing complete, adding cursor...");
       // Add cursor effect at the end
       element.innerHTML += '<span class="typing-cursor">|</span>';
-      
+
       // Restore the original HTML structure after typing is complete
       setTimeout(() => {
         console.log("Restoring original HTML...");
@@ -364,8 +372,11 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize typing animation when page loads
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM Content Loaded!");
+  
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
+    console.log("Hero title found!");
     console.log("Hero title content:", heroTitle.textContent);
     console.log("Hero title HTML:", heroTitle.innerHTML);
     console.log("Starting typing animation...");
