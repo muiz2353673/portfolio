@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (downloadResumeBtn) {
     console.log("Download resume button found!");
-    
+
     downloadResumeBtn.addEventListener("click", () => {
       const notification = document.createElement("div");
       notification.style.cssText = `
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (hamburger && navMenu) {
     console.log("Mobile navigation elements found!");
-    
+
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
@@ -201,104 +201,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     console.log("Contact form found!");
-    
-    // Check if EmailJS is loaded
-    if (typeof emailjs === "undefined") {
-      console.error("EmailJS is not loaded!");
-      showNotification(
-        "Email service not available. Please refresh the page.",
-        "error"
-      );
-    } else {
-      // Initialize EmailJS
-      try {
-        emailjs.init("iyunlSOiv56Xlhycv");
-        console.log("EmailJS initialized successfully");
-      } catch (error) {
-        console.error("Failed to initialize EmailJS:", error);
-        showNotification("Failed to initialize email service.", "error");
+    console.log("Using Formspree for email handling");
+
+    contactForm.addEventListener("submit", function (e) {
+      console.log("Contact form submitted!");
+
+      // Get form data
+      const formData = new FormData(this);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const subject = formData.get("subject");
+      const message = formData.get("message");
+
+      console.log("Form data:", { name, email, subject, message });
+
+      // Simple validation
+      if (!name || !email || !subject || !message) {
+        e.preventDefault();
+        showNotification("Please fill in all fields", "error");
+        return;
       }
 
-      contactForm.addEventListener("submit", function (e) {
-        console.log("Contact form submitted!");
+      if (!isValidEmail(email)) {
         e.preventDefault();
+        showNotification("Please enter a valid email address", "error");
+        return;
+      }
 
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const subject = formData.get("subject");
-        const message = formData.get("message");
+      // Show loading state
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
 
-        console.log("Form data:", { name, email, subject, message });
+      // Let Formspree handle the submission
+      console.log("Formspree will handle the email submission");
 
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-          showNotification("Please fill in all fields", "error");
-          return;
-        }
-
-        if (!isValidEmail(email)) {
-          showNotification("Please enter a valid email address", "error");
-          return;
-        }
-
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = "Sending...";
-        submitBtn.disabled = true;
-
-        // Prepare email template parameters
-        const templateParams = {
-          from_name: name,
-          from_email: email,
-          subject: subject,
-          message: message,
-          to_email: "muizmunshi@gmail.com",
-          reply_to: email,
-        };
-
-        // Send email using EmailJS
-        console.log("Attempting to send email with params:", templateParams);
-        console.log("Service ID: service_z4igei9");
-        console.log("Template ID: template_1yq29pw");
-
-        emailjs
-          .send("service_z4igei9", "template_1yq29pw", templateParams)
-          .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-              showNotification(
-                "Message sent successfully! I'll get back to you soon.",
-                "success"
-              );
-              contactForm.reset();
-            },
-            function (error) {
-              console.log("FAILED...", error);
-              console.log("Error details:", error.text);
-              console.log("Error status:", error.status);
-
-              let errorMessage = "Failed to send message. Please try again or contact me directly.";
-
-              if (error.text && error.text.includes("Service not found")) {
-                errorMessage = "Email service not configured. Please check your EmailJS setup.";
-              } else if (error.text && error.text.includes("Template not found")) {
-                errorMessage = "Email template not found. Please check your EmailJS template.";
-              } else if (error.text && error.text.includes("Authentication failed")) {
-                errorMessage = "Authentication failed. Please check your EmailJS keys.";
-              }
-
-              showNotification(errorMessage, "error");
-            }
-          )
-          .finally(function () {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-          });
-      });
-    }
+      // Show success message after a short delay (Formspree will redirect)
+      setTimeout(() => {
+        showNotification(
+          "Message sent successfully! I'll get back to you soon.",
+          "success"
+        );
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
+    });
   }
 
   // Initialize typing animation
@@ -352,11 +300,7 @@ function showNotification(message, type = "info") {
     top: 20px;
     right: 20px;
     background: ${
-      type === "success"
-        ? "#10b981"
-        : type === "error"
-        ? "#ef4444"
-        : "#3b82f6"
+      type === "success" ? "#10b981" : type === "error" ? "#ef4444" : "#3b82f6"
     };
     color: white;
     padding: 1rem 1.5rem;
@@ -394,14 +338,14 @@ function typeWriter(element, text, speed = 100) {
   console.log("Element:", element);
   console.log("Text:", text);
   console.log("Speed:", speed);
-  
+
   let i = 0;
   const originalHTML = element.innerHTML;
   console.log("Original HTML:", originalHTML);
-  
+
   const simpleText = "Hi, I'm Abdul Muiz Munshi";
   console.log("Simple text to type:", simpleText);
-  
+
   element.innerHTML = "";
   console.log("Cleared element, starting typing...");
 
@@ -414,7 +358,7 @@ function typeWriter(element, text, speed = 100) {
     } else {
       console.log("Typing complete, adding cursor...");
       element.innerHTML += '<span class="typing-cursor">|</span>';
-      
+
       setTimeout(() => {
         console.log("Restoring original HTML...");
         element.innerHTML = originalHTML;
