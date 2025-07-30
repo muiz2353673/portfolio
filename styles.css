@@ -311,6 +311,18 @@ body {
   /* Simplified styling to ensure text is visible */
 }
 
+/* Typing cursor animation */
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: #4299e1;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 @keyframes glow {
   from {
     filter: drop-shadow(0 0 20px rgba(66, 153, 225, 0.3));
