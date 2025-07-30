@@ -143,8 +143,25 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contact form handling
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
+  // Check if EmailJS is loaded
+  if (typeof emailjs === "undefined") {
+    console.error("EmailJS is not loaded!");
+    showNotification(
+      "Email service not available. Please refresh the page.",
+      "error"
+    );
+    return;
+  }
+
   // Initialize EmailJS
-  emailjs.init("iyunlSOiv56Xlhycv"); // Your actual EmailJS public key
+  try {
+    emailjs.init("iyunlSOiv56Xlhycv"); // Your actual EmailJS public key
+    console.log("EmailJS initialized successfully");
+  } catch (error) {
+    console.error("Failed to initialize EmailJS:", error);
+    showNotification("Failed to initialize email service.", "error");
+    return;
+  }
 
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -180,10 +197,14 @@ if (contactForm) {
       subject: subject,
       message: message,
       to_email: "muizmunshi@gmail.com", // Your email address
+      reply_to: email, // Add reply_to for better email handling
     };
 
     // Send email using EmailJS
     console.log("Attempting to send email with params:", templateParams);
+    console.log("Service ID: service_z4igei9");
+    console.log("Template ID: template_1yq29pw");
+
     emailjs
       .send("service_z4igei9", "template_1yq29pw", templateParams)
       .then(
@@ -198,10 +219,27 @@ if (contactForm) {
         function (error) {
           console.log("FAILED...", error);
           console.log("Error details:", error.text);
-          showNotification(
-            "Failed to send message. Please try again or contact me directly.",
-            "error"
-          );
+          console.log("Error status:", error.status);
+
+          // More specific error messages
+          let errorMessage =
+            "Failed to send message. Please try again or contact me directly.";
+
+          if (error.text && error.text.includes("Service not found")) {
+            errorMessage =
+              "Email service not configured. Please check your EmailJS setup.";
+          } else if (error.text && error.text.includes("Template not found")) {
+            errorMessage =
+              "Email template not found. Please check your EmailJS template.";
+          } else if (
+            error.text &&
+            error.text.includes("Authentication failed")
+          ) {
+            errorMessage =
+              "Authentication failed. Please check your EmailJS keys.";
+          }
+
+          showNotification(errorMessage, "error");
         }
       )
       .finally(function () {
