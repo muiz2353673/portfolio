@@ -97,6 +97,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // Floating Skills Interaction
+  document.querySelectorAll(".floating-skill").forEach((skill) => {
+    skill.addEventListener("click", () => {
+      const skillName = skill.getAttribute("data-skill");
+      console.log(`Clicked on: ${skillName}`);
+
+      // Add a pulse effect on click
+      skill.style.animation = "none";
+      skill.offsetHeight; // Trigger reflow
+      skill.style.animation =
+        "float 6s ease-in-out infinite, pulse 0.6s ease-in-out";
+
+      // Remove pulse animation after it completes
+      setTimeout(() => {
+        skill.style.animation = "float 6s ease-in-out infinite";
+      }, 600);
+    });
+  });
+
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
