@@ -107,11 +107,11 @@ document.addEventListener("DOMContentLoaded", () => {
       skill.style.animation = "none";
       skill.offsetHeight; // Trigger reflow
       skill.style.animation =
-        "float 6s ease-in-out infinite, pulse 0.6s ease-in-out";
+        "float 3s ease-in-out infinite, pulse 0.6s ease-in-out";
 
       // Remove pulse animation after it completes
       setTimeout(() => {
-        skill.style.animation = "float 6s ease-in-out infinite";
+        skill.style.animation = "float 3s ease-in-out infinite";
       }, 600);
     });
   });
