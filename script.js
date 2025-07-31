@@ -182,6 +182,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // View More Projects functionality
+  const viewMoreBtn = document.getElementById("view-more-projects");
+  const hiddenProjects = document.querySelectorAll(".hidden-project");
+
+  if (viewMoreBtn && hiddenProjects.length > 0) {
+    viewMoreBtn.addEventListener("click", function () {
+      hiddenProjects.forEach((project, index) => {
+        setTimeout(() => {
+          project.classList.add("show");
+        }, index * 200); // Stagger the animation
+      });
+
+      // Change button text and hide it
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-check"></i> All Projects Shown';
+        this.style.background = "linear-gradient(135deg, #10b981, #059669)";
+        this.disabled = true;
+      }, hiddenProjects.length * 200 + 300);
+    });
+  }
+
   // Parallax effect for hero section
   window.addEventListener("scroll", () => {
     const scrolled = window.pageYOffset;
