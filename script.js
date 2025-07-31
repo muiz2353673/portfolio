@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Intersection Observer for scroll animations
+  // Enhanced Intersection Observer for scroll animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -145,16 +145,48 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("fade-in-up");
+
+        // Add staggered animations for child elements
+        const children = entry.target.querySelectorAll(
+          ".skill-item, .project-card, .stat, .contact-item"
+        );
+        children.forEach((child, index) => {
+          setTimeout(() => {
+            child.classList.add("scale-in");
+          }, index * 100);
+        });
       }
     });
   }, observerOptions);
 
+  // Observe sections for animation
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
   // Observe elements for animation
   const animatedElements = document.querySelectorAll(
-    ".about-content, .skills-grid, .projects-grid, .contact-content"
+    ".about-content, .skills-grid, .projects-grid, .contact-content, .music-content"
   );
   animatedElements.forEach((el) => {
     observer.observe(el);
+  });
+
+  // Add section visibility animation
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
   });
 
   // Skill items hover effect
@@ -182,24 +214,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // View More Projects functionality
+  // View More Projects functionality with toggle
   const viewMoreBtn = document.getElementById("view-more-projects");
   const hiddenProjects = document.querySelectorAll(".hidden-project");
+  const toggleIcon = document.getElementById("toggle-icon");
+  const toggleText = document.getElementById("toggle-text");
+  let projectsExpanded = false;
 
   if (viewMoreBtn && hiddenProjects.length > 0) {
     viewMoreBtn.addEventListener("click", function () {
-      hiddenProjects.forEach((project, index) => {
-        setTimeout(() => {
-          project.classList.add("show");
-        }, index * 200); // Stagger the animation
-      });
+      if (!projectsExpanded) {
+        // Expand projects
+        hiddenProjects.forEach((project, index) => {
+          setTimeout(() => {
+            project.classList.add("show");
+          }, index * 200); // Stagger the animation
+        });
 
-      // Change button text and hide it
-      setTimeout(() => {
-        this.innerHTML = '<i class="fas fa-check"></i> All Projects Shown';
-        this.style.background = "linear-gradient(135deg, #10b981, #059669)";
-        this.disabled = true;
-      }, hiddenProjects.length * 200 + 300);
+        // Update button
+        setTimeout(() => {
+          toggleIcon.className = "fas fa-minus";
+          toggleText.textContent = "Show Less Projects";
+          this.style.background = "linear-gradient(135deg, #ef4444, #dc2626)";
+          projectsExpanded = true;
+        }, hiddenProjects.length * 200 + 300);
+      } else {
+        // Collapse projects
+        hiddenProjects.forEach((project, index) => {
+          setTimeout(() => {
+            project.classList.remove("show");
+          }, index * 100); // Faster collapse
+        });
+
+        // Update button
+        setTimeout(() => {
+          toggleIcon.className = "fas fa-plus";
+          toggleText.textContent = "View More Projects";
+          this.style.background =
+            "linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))";
+          projectsExpanded = false;
+        }, hiddenProjects.length * 100 + 200);
+      }
     });
   }
 
@@ -216,6 +271,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add loading animation
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
+
+    // Add staggered section animations on load
+    setTimeout(() => {
+      document.querySelectorAll("section").forEach((section, index) => {
+        setTimeout(() => {
+          section.classList.add("visible");
+        }, index * 200);
+      });
+    }, 500);
+  });
+
+  // Enhanced button click effects
+  document.querySelectorAll(".btn").forEach((button) => {
+    button.addEventListener("click", function (e) {
+      // Create ripple effect
+      const ripple = document.createElement("span");
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = x + "px";
+      ripple.style.top = y + "px";
+      ripple.classList.add("ripple");
+
+      this.appendChild(ripple);
+
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
   });
 
   // Contact form handling
