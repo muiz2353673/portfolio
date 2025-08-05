@@ -17,6 +17,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Fea
 
 ```
 my-portfolio/
+├── assests/├── profile picture etc.
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript functionality
