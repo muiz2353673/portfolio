@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Muiz Munshi — Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text: #1a1a1a;
+        --text-muted: #444;
+        --accent: #2563eb;
+        --border: #e5e7eb;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: var(--text);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 32px 40px;
+        background: #fff;
+      }
+      .no-print {
+        margin-bottom: 24px;
+      }
+      .no-print button {
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .no-print button:hover {
+        background: #1d4ed8;
+      }
+      h1 {
+        font-size: 22pt;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .tagline {
+        font-size: 11pt;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        font-size: 10pt;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+      .contact a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+      h2 {
+        font-size: 12pt;
+        font-weight: 700;
+        color: var(--text);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 4px;
+        margin: 24px 0 12px;
+      }
+      .summary {
+        color: var(--text-muted);
+        margin-bottom: 8px;
+      }
+      .job {
+        margin-bottom: 16px;
+      }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .job-title {
+        font-weight: 700;
+        font-size: 11pt;
+        color: var(--text);
+      }
+      .job-company {
+        font-weight: 600;
+        color: var(--accent);
+      }
+      .job-date {
+        font-size: 10pt;
+        color: var(--text-muted);
+      }
+      .job ul {
+        margin: 6px 0 0 18px;
+        padding: 0;
+      }
+      .job li {
+        margin-bottom: 2px;
+        color: var(--text-muted);
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .tags span {
+        font-size: 9pt;
+        background: #f1f5f9;
+        color: var(--text-muted);
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .skill-cat h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .skill-cat p, .skill-cat ul {
+        font-size: 10pt;
+        color: var(--text-muted);
+        margin: 0;
+        padding-left: 14px;
+      }
+      .skill-cat ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .skill-cat li::before {
+        content: "• ";
+        color: var(--accent);
+      }
+      .consulting-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .consulting-card h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .consulting-card ul {
+        margin: 0;
+        padding-left: 14px;
+        font-size: 10pt;
+        color: var(--text-muted);
+      }
+      .consulting-card li {
+        margin-bottom: 2px;
+      }
+      .project {
+        margin-bottom: 12px;
+      }
+      .project h4 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 2px;
+      }
+      .project p {
+        font-size: 10pt;
+        color: var(--text-muted);
+        margin: 0;
+      }
+      .project .tech {
+        font-size: 9pt;
+        color: var(--text-muted);
+        margin-top: 4px;
+      }
+      @media print {
+        body {
+          padding: 0;
+          max-width: 100%;
+        }
+        .no-print {
+          display: none !important;
+        }
+        h2 {
+          margin-top: 16px;
+          page-break-after: avoid;
+        }
+        .job, .project {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="no-print">
+      <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <h1>Abdul Muiz Munshi</h1>
+    <p class="tagline">Technology Consultant · Full-Stack Software Engineer · Business Problem Solver</p>
+    <div class="contact">
+      <span>London, United Kingdom</span>
+      <span>·</span>
+      <a href="mailto:muizmunshi@gmail.com">muizmunshi@gmail.com</a>
+      <span>·</span>
+      <a href="tel:+4407818307416">+44 07818307416</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/abdul-muiz-munshi-6ab4141b8" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="https://github.com/muiz2353673" target="_blank" rel="noopener">GitHub</a>
+      <span>·</span>
+      <a href="https://muizmunshi.vercel.app" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+
+    <h2>Summary</h2>
+    <p class="summary">
+      First Class Computer Science graduate with experience delivering real production systems—not just academic projects. I work at the intersection of technology, data, and business, helping organisations turn complex problems into practical, scalable solutions. Experienced in translating business needs into technical solutions and measurable outcomes; comfortable working with non-technical stakeholders and communicating outcomes in clear, business-friendly language. Long-term goal: Technology & Digital Transformation Consultant.
+    </p>
+
+    <h2>Work Experience</h2>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Full-Stack Software Developer</span>
+          <span class="job-company"> — Letterbox Distribution</span>
+        </div>
+        <span class="job-date">Current role · London, UK</span>
+      </div>
+      <ul>
+        <li><strong>Beaccon</strong> — Built and maintain a full-stack council/community platform (admin, council, and user-facing modules) for workflows, content, and reporting. Streamlined processes and improved engagement for councils and residents.</li>
+        <li><strong>Internal Office Website</strong> — Designed and delivered an internal web application so teams have a single place for documents, links, workflows, and resources. Reduced time searching and created a single point of truth for operations.</li>
+        <li>Gathering and refining requirements with stakeholders; designing scalable, maintainable solutions; balancing speed, quality, and long-term maintainability.</li>
+      </ul>
+      <div class="tags">
+        <span>Full-Stack</span>
+        <span>React</span>
+        <span>Stakeholder Requirements</span>
+        <span>System Integration</span>
+      </div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">BSc (Hons) Computer Science — First Class Honours</span>
+          <span class="job-company"> — University of Huddersfield</span>
+        </div>
+        <span class="job-date">Graduation · Huddersfield, UK</span>
+      </div>
+      <ul>
+        <li>Full-stack and data science projects; group and individual assignments.</li>
+        <li>Topics: software engineering, databases, ML/data, IoT, and security.</li>
+        <li>Relevant modules: Web Development, Data Science, Software Design.</li>
+      </ul>
+      <div class="tags">
+        <span>Full Stack</span>
+        <span>Data Science</span>
+        <span>Team Projects</span>
+      </div>
+    </div>
+
+    <h2>Core Consulting Skills</h2>
+    <div class="consulting-grid">
+      <div class="consulting-card">
+        <h4>Problem Solving & Analysis</h4>
+        <ul>
+          <li>Requirements gathering & ambiguity reduction</li>
+          <li>Root-cause analysis</li>
+          <li>Trade-off evaluation (cost, time, risk, scalability)</li>
+        </ul>
+      </div>
+      <div class="consulting-card">
+        <h4>Stakeholder Engagement</h4>
+        <ul>
+          <li>Translating technical concepts for non-technical audiences</li>
+          <li>Aligning solutions with business goals</li>
+          <li>Collaborative decision-making</li>
+        </ul>
+      </div>
+      <div class="consulting-card">
+        <h4>Business Impact</h4>
+        <ul>
+          <li>Process automation & efficiency gains</li>
+          <li>Data-driven insights for decision support</li>
+          <li>Scalable system design aligned to growth</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <h4>Languages</h4>
+        <p>Python, JavaScript, Java, PHP, SQL</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Frameworks & Web</h4>
+        <p>React, Laravel, Spring Boot, Tailwind CSS, Bootstrap</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Data & Analytics</h4>
+        <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Tableau, Excel, Jupyter</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Cloud & Delivery</h4>
+        <p>Docker, Git, GitHub, AWS, Linux, REST APIs, Agile</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Tools</h4>
+        <p>VS Code, Microsoft Office</p>
+      </div>
+    </div>
+
+    <h2>Selected Projects</h2>
+    <div class="project">
+      <h4>Beaccon — Council / Community Platform</h4>
+      <p>Full-stack platform (admin, council, user-facing modules) for workflows, content, and reporting. Streamlined processes and improved engagement for councils and residents. Delivered at Letterbox Distribution.</p>
+      <p class="tech">Full-Stack · Stakeholder Requirements · System Integration</p>
+    </div>
+    <div class="project">
+      <h4>Internal Office Website</h4>
+      <p>Internal web application for documents, links, workflows, and team resources. Single point of truth for operations; reduced time searching. Delivered at Letterbox Distribution.</p>
+      <p class="tech">Internal Tools · UX for Non-Technical Users · Requirements Gathering</p>
+    </div>
+    <div class="project">
+      <h4>Noted.AI — AI-Powered Academic Assistant (In Progress)</h4>
+      <p>AI-driven summarisation, flashcards, and citation tooling. React, Node.js, OpenAI API, TypeScript.</p>
+      <p class="tech">React · Node.js · OpenAI API · TypeScript</p>
+    </div>
+    <div class="project">
+      <h4>Movie Recommendation System</h4>
+      <p>ML-based recommendation engine. Python, Machine Learning, Data Science.</p>
+      <p class="tech">Python · Machine Learning · Data Science</p>
+    </div>
+
+    <script>
+      document.querySelector('.no-print button').addEventListener('click', function() {
+        window.print();
+      });
+    </script>
+  </body>
+</html>

@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         transition: transform 0.3s ease;
         max-width: 300px;
       `;
-      notification.textContent = "Opening resume in new tab...";
+      notification.textContent = "Opening resume… Use Print → Save as PDF to download.";
 
       document.body.appendChild(notification);
 
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Add staggered animations for child elements
         const children = entry.target.querySelectorAll(
-          ".skill-item, .project-card, .stat, .contact-item"
+          ".skill-item, .project-card, .stat, .contact-item, .experience-card, .role-card"
         );
         children.forEach((child, index) => {
           setTimeout(() => {
