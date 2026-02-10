@@ -1189,6 +1189,38 @@ section.visible {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 2rem;
+}
+
+.innovation-rde {
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+}
+
+.innovation-rde-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.innovation-rde-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.innovation-rde-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary, #4299e1);
+  font-weight: bold;
   letter-spacing: -0.01em;
 }
 
