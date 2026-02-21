@@ -118,6 +118,13 @@
         margin-bottom: 2px;
         color: var(--text-muted);
       }
+      .job ul ul {
+        margin: 4px 0 6px 18px;
+        list-style: disc;
+      }
+      .job ul ul li {
+        margin-bottom: 2px;
+      }
       .tags {
         display: flex;
         flex-wrap: wrap;
@@ -216,8 +223,11 @@
           margin-top: 16px;
           page-break-after: avoid;
         }
-        .job, .project, .rde-list {
+        .job, .project {
           page-break-inside: avoid;
+        }
+        .rde-list {
+          page-break-after: avoid;
         }
       }
     </style>
@@ -258,16 +268,31 @@
         <span class="job-date">Current role · London, UK</span>
       </div>
       <ul>
-        <li><strong>Beaccon</strong> — Led development of a full-stack council/community platform involving technical uncertainty around scalability, performance, and system integration, requiring iterative experimentation with architecture and workflows to achieve reliable outcomes for councils and residents.</li>
-        <li><strong>Internal Office Website</strong> — Designed and delivered an internal web application under constraints of time and existing tools; addressed technical uncertainty around integration, information architecture, and user workflows through iterative experimentation to create a single point of truth for operations.</li>
-        <li>Gathering and refining requirements under ambiguity; designing solutions where scalability and maintainability trade-offs were not obvious; balancing time, cost, and quality through iterative decision-making.</li>
+        <li>
+          <strong>Identified and resolved technological uncertainties in:</strong>
+          <ul>
+            <li>Designing scalable multi-tenant architecture for a council-facing platform where performance thresholds and system integration constraints were not readily deducible.</li>
+            <li>Integrating third-party government datasets and APIs under ambiguity around compatibility, data consistency, and performance behaviour.</li>
+            <li>Reducing system load times through iterative architectural experimentation and profiling-based optimisation.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Demonstrated competent professional judgement in:</strong>
+          <ul>
+            <li>Evaluating alternative technology stacks under scalability and cost constraints.</li>
+            <li>Designing automation workflows where maintainability trade-offs were non-obvious.</li>
+            <li>Debugging production-level failures through structured root-cause analysis.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Commercial & stakeholder exposure:</strong>
+          <ul>
+            <li>Gathered and refined requirements directly from business stakeholders.</li>
+            <li>Translated technical limitations and risks into commercially understandable language.</li>
+            <li>Balanced cost, time, and quality constraints during delivery.</li>
+          </ul>
+        </li>
       </ul>
-      <div class="tags">
-        <span>Full-Stack</span>
-        <span>React</span>
-        <span>Stakeholder Requirements</span>
-        <span>System Integration</span>
-      </div>
     </div>
 
     <h2>Education</h2>
@@ -319,48 +344,27 @@
       </div>
     </div>
 
-    <h2>Innovation & R&D Experience</h2>
+    <h2>UK R&D Legislative Awareness</h2>
+    <p class="summary">Developed structured understanding of UK R&D tax legislation and DSIT guidelines, including:</p>
     <ul class="rde-list">
-      <li>Identified and resolved technical uncertainties related to system scalability, performance optimisation, and integration of new tools into production environments.</li>
-      <li>Designed and tested alternative architectures where outcomes were not readily deducible by a competent professional.</li>
-      <li>Worked iteratively under constraints of time, cost, and maintainability to deliver novel solutions aligned with business needs.</li>
-      <li>Communicated complex technical challenges and resolutions clearly to non-technical stakeholders.</li>
+      <li>Advance in science or technology criteria</li>
+      <li>Technological uncertainty definition</li>
+      <li>Competent professional test</li>
+      <li>SME vs RDEC scheme distinctions</li>
+      <li>Qualifying expenditure categories</li>
     </ul>
 
     <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-cat">
-        <h4>Languages</h4>
-        <p>Python, JavaScript, Java, PHP, SQL</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Frameworks & Web</h4>
-        <p>React, Laravel, Spring Boot, Tailwind CSS, Bootstrap</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Data & Analytics</h4>
-        <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Tableau, Excel, Jupyter</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Cloud & Delivery</h4>
-        <p>Docker, Git, GitHub, AWS, Linux, REST APIs, Agile</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Tools</h4>
-        <p>VS Code, Microsoft Office</p>
-      </div>
-    </div>
+    <p class="summary">Full-stack development (React, Laravel, Spring Boot), data & analytics (Python, Pandas, SQL, Tableau), cloud & delivery (Docker, Git, AWS, REST APIs, Agile).</p>
 
     <h2>Selected Projects</h2>
     <div class="project">
       <h4>Beaccon — Council / Community Platform</h4>
-      <p>Full-stack platform involving technical uncertainty around scalability, performance, and system integration; iterative experimentation with architecture and workflows. Delivered at Letterbox Distribution.</p>
-      <p class="tech">Full-Stack · Technical Uncertainty · System Integration · Iterative Experimentation</p>
+      <p>Multi-tenant council-facing platform; scalability and system integration constraints not readily deducible. Iterative architectural experimentation and profiling-based optimisation. Letterbox Distribution.</p>
     </div>
     <div class="project">
       <h4>Internal Office Website</h4>
-      <p>Internal web application addressing uncertainty around integration and information architecture; delivered under time and tooling constraints through iterative experimentation. Single point of truth for operations. Delivered at Letterbox Distribution.</p>
-      <p class="tech">Internal Tools · Technical Uncertainty · Requirements Gathering</p>
+      <p>Internal web application under time and tooling constraints; integration and information architecture addressed through iterative delivery. Single point of truth for operations. Letterbox Distribution.</p>
     </div>
     <script>
       document.querySelector('.no-print button').addEventListener('click', function() {
