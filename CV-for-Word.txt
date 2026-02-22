@@ -1,0 +1,77 @@
+ABDUL MUIZ MUNSHI
+Associate Business Analyst (Client-Focused) · Stakeholder Management · Requirements & Process Improvement
+
+London, United Kingdom · muizmunshi@gmail.com · +44 07818307416
+LinkedIn · GitHub · Portfolio (muizmunshi.vercel.app)
+
+——————————————————————————————————————————————————————
+
+PROFESSIONAL SUMMARY
+
+First Class Computer Science graduate transitioning into a client-focused Business Analyst role. Experienced in requirements gathering, stakeholder management, and process mapping; skilled at translating business needs into clear solution design and acting as the bridge between operations and technology. Strong in gap analysis, user stories, and Agile delivery. Technical background enables effective collaboration with development teams without being positioned as a developer. Focused on digital transformation, process improvement, and systems analysis to deliver measurable business impact.
+
+——————————————————————————————————————————————————————
+
+WORK EXPERIENCE
+
+Business & Technical Analyst — Letterbox Distribution
+Current role · London, UK
+
+Stakeholder engagement & requirements:
+• Led stakeholder workshops with operations and council clients to capture and prioritise requirements; resolved requirement ambiguity through structured questioning and process walk-throughs.
+• Gathered and documented business needs for a council-facing platform and an internal office portal; translated into user stories and acceptance criteria for delivery teams.
+
+Process mapping & workflow optimisation:
+• Mapped as-is processes for council workflows and internal operations; identified gaps and designed to-be processes to reduce duplication and improve clarity.
+• Supported workflow optimisation and single point of truth for documents and resources, reducing time spent searching and improving day-to-day efficiency for teams.
+
+Bridge between operations and technology:
+• Acted as the link between business stakeholders and development; communicated technical constraints and feasibility in commercially understandable language.
+• Performed trade-off analysis (cost, time, feasibility) to support decision-making; balanced scope and delivery constraints in an Agile context.
+
+Measurable impact: Council/community platform in production with streamlined processes and improved engagement; internal portal adopted as single source of truth, reducing time-to-information for staff.
+
+——————————————————————————————————————————————————————
+
+EDUCATION
+
+BSc (Hons) Computer Science — First Class Honours — University of Huddersfield
+Graduation · Huddersfield, UK
+
+• Relevant to Business Analysis: requirements analysis, systems design, data modelling, and group project delivery with stakeholder presentation.
+• Modules: Web Development, Data Science, Software Design, databases, and software engineering.
+
+Tags: Requirements Analysis · Systems Design · Team Projects
+
+——————————————————————————————————————————————————————
+
+BUSINESS ANALYSIS & CORE SKILLS
+
+Requirements & Solution Design          Stakeholder Management              Process & Delivery
+• Requirements gathering and           • Stakeholder workshops and         • Process mapping and
+  elicitation                            facilitation                         process improvement
+• Gap analysis and user stories        • Translating business needs        • Digital transformation and
+• Systems analysis and solution          for technical teams                  workflow optimisation
+  design                               • Collaborative decision-making    • Agile delivery and
+                                                                              trade-off analysis
+
+——————————————————————————————————————————————————————
+
+TECHNICAL COMPETENCE
+
+Sufficient technical fluency to collaborate with developers: experience with web platforms, APIs, data structures, and Agile tooling. Not positioned as a hands-on developer; focus remains on business analysis, requirements, and stakeholder outcomes.
+
+——————————————————————————————————————————————————————
+
+SELECTED PROJECTS
+
+Beaccon — Council / Community Platform
+Business problem: Councils needed a centralised platform for operations and resident engagement. Stakeholders: Council clients, operations, delivery team. My role: Requirements gathering, process mapping, trade-off analysis, and acting as bridge between business and build. Outcome: Platform in production; streamlined workflows and improved engagement. Letterbox Distribution.
+
+Internal Office Website
+Business problem: Scattered information and tools; staff spent time searching. Stakeholders: Internal operations, multiple teams. My role: Process analysis, gap identification, requirements and solution structure. Constraints: Time and existing tools. Outcome: Single point of truth for documents and resources; reduced time-to-information. Letterbox Distribution.
+
+——————————————————————————————————————————————————————
+
+ATS KEYWORDS (already woven into the CV above):
+Business Analysis · Stakeholder Management · Requirements Gathering · Process Improvement · Gap Analysis · User Stories · Digital Transformation · Systems Analysis · Agile · Solution Design
