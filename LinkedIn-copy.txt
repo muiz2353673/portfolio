@@ -11,15 +11,16 @@ Business Analyst | Requirements & Stakeholder Management | Process Improvement |
 LINKEDIN ABOUT SECTION (paste into "About" on your profile)
 ——————————————————————————————————————————————————————
 
-I'm a First Class Computer Science graduate who has chosen to focus on Business Analysis and client-facing delivery—not on hands-on development.
+First Class Computer Science graduate and Software Developer with strong experience in stakeholder engagement, requirements gathering, and process optimisation.
 
 What I do:
-• Requirements gathering and stakeholder management: I run workshops, resolve ambiguity, and turn business needs into clear requirements and user stories.
-• Process mapping and process improvement: I map as-is and to-be processes, spot gaps, and help teams work more effectively.
-• Bridge between operations and technology: I translate between business stakeholders and developers so that scope, constraints, and feasibility are understood by everyone. I do trade-off analysis (cost, time, feasibility) and support decision-making in an Agile context.
+• Facilitate stakeholder workshops, define functional requirements, and prioritise delivery scope.
+• Map as-is and to-be processes, identify gaps, and help teams work more effectively.
+• Translate business needs into structured solution designs and collaborate closely with development teams in Agile environments.
+• Produce structured documentation: user stories, acceptance criteria, and process maps.
 
-I'm technical enough to collaborate confidently with developers—I understand systems, data, and delivery—but my value is in analysis, facilitation, and impact, not in writing code day to day.
+Strong technical fluency enabling realistic feasibility assessment and effective collaboration with engineering teams.
 
-Currently: Business & Technical Analyst at Letterbox Distribution, working on a council-facing platform and internal operations tools. I'm interested in Associate Business Analyst, client-focused BA, and Digital Transformation roles where I can add value through strong stakeholder engagement and clear, measurable outcomes.
+Currently: Software Developer (Business Analysis Focus) at Letterbox Distribution, working on a council-facing platform and internal operations tools. Seeking to transition into a client-focused Business Analyst role to formalise this direction.
 
 Based in London. Professional, client-ready, and confident in ambiguity. Open to new opportunities and conversations.

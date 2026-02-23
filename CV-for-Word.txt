@@ -8,26 +8,30 @@ LinkedIn · GitHub · Portfolio (muizmunshi.vercel.app)
 
 PROFESSIONAL SUMMARY
 
-First Class Computer Science graduate transitioning into a client-focused Business Analyst role. Experienced in requirements gathering, stakeholder management, and process mapping; skilled at translating business needs into clear solution design and acting as the bridge between operations and technology. Strong in gap analysis, user stories, and Agile delivery. Technical background enables effective collaboration with development teams without being positioned as a developer. Focused on digital transformation, process improvement, and systems analysis to deliver measurable business impact.
+First Class Computer Science graduate and Software Developer with strong experience in stakeholder engagement, requirements gathering, and process optimisation. Experienced in translating business needs into structured solution designs and collaborating closely with development teams in Agile environments. Seeking to transition into a client-focused Business Analyst role to formalise this direction.
 
 ——————————————————————————————————————————————————————
 
 WORK EXPERIENCE
 
-Business & Technical Analyst — Letterbox Distribution
+Software Developer (Business Analysis Focus) — Letterbox Distribution
 Current role · London, UK
 
 Stakeholder engagement & requirements:
-• Led stakeholder workshops with operations and council clients to capture and prioritise requirements; resolved requirement ambiguity through structured questioning and process walk-throughs.
+• Facilitated stakeholder workshops with operations and council clients to define functional requirements and prioritise delivery scope.
 • Gathered and documented business needs for a council-facing platform and an internal office portal; translated into user stories and acceptance criteria for delivery teams.
 
 Process mapping & workflow optimisation:
 • Mapped as-is processes for council workflows and internal operations; identified gaps and designed to-be processes to reduce duplication and improve clarity.
-• Supported workflow optimisation and single point of truth for documents and resources, reducing time spent searching and improving day-to-day efficiency for teams.
+• Reduced time spent locating operational documents by streamlining workflows and centralising resources into a single internal portal.
 
 Bridge between operations and technology:
 • Acted as the link between business stakeholders and development; communicated technical constraints and feasibility in commercially understandable language.
 • Performed trade-off analysis (cost, time, feasibility) to support decision-making; balanced scope and delivery constraints in an Agile context.
+
+Agile delivery & documentation:
+• Collaborated with developers during sprint cycles to refine user stories, clarify acceptance criteria, and ensure delivered features aligned with stakeholder expectations.
+• Produced structured documentation including user stories, acceptance criteria, and process maps to support delivery.
 
 Measurable impact: Council/community platform in production with streamlined processes and improved engagement; internal portal adopted as single source of truth, reducing time-to-information for staff.
 
@@ -57,9 +61,15 @@ Requirements & Solution Design          Stakeholder Management              Proc
 
 ——————————————————————————————————————————————————————
 
+TOOLS & METHODS
+
+Jira · Confluence · Miro / Lucidchart · Agile Scrum · User Stories · MoSCoW Prioritisation · AS-IS / TO-BE Process Mapping
+
+——————————————————————————————————————————————————————
+
 TECHNICAL COMPETENCE
 
-Sufficient technical fluency to collaborate with developers: experience with web platforms, APIs, data structures, and Agile tooling. Not positioned as a hands-on developer; focus remains on business analysis, requirements, and stakeholder outcomes.
+Strong technical fluency enabling realistic feasibility assessment and effective collaboration with engineering teams. Experience with web platforms, APIs, data structures, and Agile tooling.
 
 ——————————————————————————————————————————————————————
 
