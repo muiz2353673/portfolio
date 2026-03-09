@@ -213,22 +213,35 @@
       }
       @media print {
         body {
-          padding: 0;
+          padding: 16px 24px;
           max-width: 100%;
+          font-size: 10pt;
+          line-height: 1.35;
         }
         .no-print {
           display: none !important;
         }
+        h1 { font-size: 18pt; margin-bottom: 2px; }
+        .tagline { font-size: 10pt; margin-bottom: 10px; }
+        .contact { margin-bottom: 14px; font-size: 9pt; }
         h2 {
-          margin-top: 16px;
+          margin-top: 10px;
+          margin-bottom: 6px;
+          font-size: 11pt;
           page-break-after: avoid;
         }
-        .job, .project {
+        .summary { margin-bottom: 4px; font-size: 10pt; }
+        .job {
+          margin-bottom: 10px;
           page-break-inside: avoid;
         }
-        .rde-list {
-          page-break-after: avoid;
-        }
+        .job li { margin-bottom: 1px; font-size: 9.5pt; }
+        .job-date { font-size: 9pt; }
+        .rde-list li { margin-bottom: 3px; font-size: 9.5pt; }
+        .rde-list { page-break-after: avoid; }
+        .skills-grid { gap: 10px; }
+        .skill-cat h4 { font-size: 9pt; }
+        .skill-cat p { font-size: 9pt; }
       }
     </style>
   </head>
@@ -283,10 +296,8 @@
         <span class="job-date">Sep 2023 – Sep 2025 · Part-time · On-site</span>
       </div>
       <ul>
-        <li>Delivered front-line support to 50–70 students per week across academic and digital service queries.</li>
-        <li>Maintained 90%+ first-contact resolution rate.</li>
-        <li>Managed stakeholder communication during peak academic periods.</li>
-        <li>Escalated complex cases following structured resolution processes.</li>
+        <li>Delivered front-line support to 50–70 students per week; maintained 90%+ first-contact resolution rate.</li>
+        <li>Managed stakeholder communication during peak periods; escalated complex cases via structured processes.</li>
       </ul>
     </div>
     <div class="job">
@@ -298,11 +309,8 @@
         <span class="job-date">Jun 2024 – Aug 2024 · Internship · Hybrid</span>
       </div>
       <ul>
-        <li>Conducted exploratory data analysis on datasets containing 1,000+ records to identify trends and patterns.</li>
-        <li>Applied statistical and data science techniques to support research objectives and validate hypotheses.</li>
-        <li>Cleaned and structured raw datasets to improve data quality and reduce inconsistencies.</li>
-        <li>Produced 3+ analytical reports translating data insights into structured findings.</li>
-        <li>Collaborated with academic supervisors to refine analytical models and improve result accuracy.</li>
+        <li>Conducted exploratory data analysis on 1,000+ records; applied statistical techniques to validate hypotheses.</li>
+        <li>Cleaned and structured raw datasets; produced 3+ analytical reports; collaborated with supervisors to refine models.</li>
       </ul>
     </div>
     <div class="job">
@@ -314,10 +322,8 @@
         <span class="job-date">Jan 2023 – Sep 2023 · Freelance · On-site</span>
       </div>
       <ul>
-        <li>Acted as liaison between students and IT services to support adoption of digital learning platforms across 200+ students.</li>
-        <li>Gathered and consolidated 30+ user feedback cases to improve system usability and engagement.</li>
-        <li>Resolved 80%+ of first-line digital platform queries through structured problem-solving.</li>
-        <li>Supported communication of digital transformation initiatives across academic departments.</li>
+        <li>Liaison between students and IT; supported digital platform adoption across 200+ students.</li>
+        <li>Gathered 30+ user feedback cases; resolved 80%+ first-line queries; supported digital transformation initiatives.</li>
       </ul>
     </div>
 
@@ -336,42 +342,13 @@
     </div>
 
     <h2>Core Skills</h2>
-    <ul class="rde-list">
-      <li>Business process modelling (BPMN)</li>
-      <li>AS-IS / TO-BE analysis</li>
-      <li>Requirements elicitation & documentation</li>
-      <li>User stories & acceptance criteria</li>
-      <li>Stakeholder workshop facilitation</li>
-      <li>Agile / Scrum delivery</li>
-      <li>Gap analysis & prioritisation frameworks</li>
-    </ul>
+    <p class="summary">Business process modelling (BPMN) · AS-IS / TO-BE analysis · Requirements elicitation & documentation · User stories & acceptance criteria · Stakeholder workshop facilitation · Agile / Scrum · Gap analysis & prioritisation</p>
 
     <h2>Tools & Methods</h2>
-    <ul class="rde-list">
-      <li>Jira · Confluence · Miro · Lucidchart</li>
-      <li>Agile / Scrum · MoSCoW Prioritisation · Backlog Refinement</li>
-      <li>BPMN process modelling · UML (use case & activity diagrams)</li>
-    </ul>
+    <p class="summary">Jira · Confluence · Miro · Lucidchart · Agile / Scrum · MoSCoW · Backlog Refinement · BPMN · UML (use case & activity diagrams)</p>
 
     <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-cat">
-        <h4>Languages</h4>
-        <p>Python, JavaScript, Java, PHP, SQL</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Frameworks & Web</h4>
-        <p>React, Laravel, Spring Boot, Tailwind CSS, Bootstrap</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Data & Analytics</h4>
-        <p>Pandas, NumPy, Tableau, Excel, Jupyter</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Cloud & Delivery</h4>
-        <p>Docker, Git, GitHub, AWS, REST APIs</p>
-      </div>
-    </div>
+    <p class="summary">Languages: Python, JavaScript, Java, PHP, SQL · Frameworks: React, Laravel, Spring Boot · Data: Pandas, NumPy, Tableau, Excel · Cloud: Docker, Git, GitHub, AWS, REST APIs</p>
     <script>
       document.querySelector('.no-print button').addEventListener('click', function() {
         window.print();
