@@ -212,16 +212,67 @@
         font-size: 10pt;
       }
       @media print {
+        @page {
+          size: A4;
+          margin: 12mm;
+        }
         body {
           padding: 0;
           max-width: 100%;
+          font-size: 10.5pt;
+          line-height: 1.4;
         }
         .no-print {
           display: none !important;
         }
+        h1 {
+          font-size: 21pt;
+          margin-bottom: 3px;
+        }
+        .tagline {
+          font-size: 10.5pt;
+          margin-bottom: 10px;
+        }
+        .contact {
+          font-size: 9.6pt;
+          gap: 5px 12px;
+          margin-bottom: 14px;
+        }
         h2 {
-          margin-top: 16px;
+          font-size: 11pt;
+          margin: 12px 0 7px;
+          padding-bottom: 2px;
           page-break-after: avoid;
+        }
+        .summary {
+          margin-bottom: 6px;
+        }
+        .job {
+          margin-bottom: 10px;
+        }
+        .job-header {
+          gap: 4px;
+        }
+        .job-title {
+          font-size: 10.5pt;
+        }
+        .job-company,
+        .job-date {
+          font-size: 9.4pt;
+        }
+        .job ul {
+          margin: 5px 0 0 16px;
+        }
+        .job li {
+          margin-bottom: 2px;
+          font-size: 10pt;
+        }
+        .rde-list {
+          margin: 5px 0 0 16px;
+        }
+        .rde-list li {
+          margin-bottom: 2px;
+          font-size: 10pt;
         }
         .job, .project {
           page-break-inside: auto;
@@ -238,7 +289,7 @@
     </div>
 
     <h1>Abdul Muiz Munshi</h1>
-    <p class="tagline"> Software Developer (Business Analysis Focus) · Requirements & Process Improvement</p>
+    <p class="tagline">Business Analyst · Requirements &amp; Process Improvement</p>
     <div class="contact">
       <span>London, United Kingdom</span>
       <span>·</span>
@@ -255,7 +306,8 @@
 
     <h2>Professional Summary</h2>
     <p class="summary">
-      Business Analyst–oriented Software Developer with a First-Class Computer Science degree and strong experience bridging business stakeholders and engineering teams. Skilled in requirements elicitation, process mapping, solution design, and Agile delivery across operational and client-facing platforms. Experienced in translating business needs into structured, measurable solutions that improve efficiency and user engagement.
+      Business-focused analyst with a technical background and First-Class Computer Science degree, translating stakeholder needs into clear requirements and user stories.
+      Strong in AS-IS/TO-BE analysis, Agile delivery, and data-informed process improvement.
     </p>
 
     <h2>Professional Experience</h2>
@@ -268,10 +320,9 @@
         <span class="job-date">Sep 2025 – Present · London, UK</span>
       </div>
       <ul>
-        <li>Facilitate requirement workshops, translate business needs into structured user stories, and conduct AS-IS / TO-BE process mapping using BPMN diagrams in Lucidchart/Miro to identify workflow improvements.</li>
-        <li>Manage scope and trade-offs within Agile delivery; ensure alignment between stakeholder expectations and technical feasibility.</li>
-        <li>Produce UML use case and activity diagrams where needed to clarify system requirements and support communication between stakeholders and developers.</li>
-        <li><strong>Key impact:</strong> 50+ documented requirements; 80+ user stories delivered; 50–80% reduction in document search time; 95%+ sprint acceptance rate.</li>
+        <li>Led stakeholder workshops, converting business needs into 50+ requirements and 80+ user stories.</li>
+        <li>Mapped AS-IS/TO-BE workflows in BPMN to identify gaps and prioritise improvements.</li>
+        <li>Managed scope and acceptance criteria in Agile sprints, contributing to 50-80% faster document retrieval and 95%+ sprint acceptance.</li>
       </ul>
     </div>
     <div class="job">
@@ -283,10 +334,7 @@
         <span class="job-date">Sep 2023 – Sep 2025 · Part-time · On-site</span>
       </div>
       <ul>
-        <li>Delivered front-line support to 50–70 students per week across academic and digital service queries.</li>
-        <li>Maintained 90%+ first-contact resolution rate.</li>
-        <li>Managed stakeholder communication during peak academic periods.</li>
-        <li>Escalated complex cases following structured resolution processes.</li>
+        <li>Resolved 50-70 weekly queries with 90%+ first-contact resolution through structured triage and escalation.</li>
       </ul>
     </div>
     <div class="job">
@@ -298,11 +346,7 @@
         <span class="job-date">Jun 2024 – Aug 2024 · Internship · Hybrid</span>
       </div>
       <ul>
-        <li>Conducted exploratory data analysis on datasets containing 1,000+ records to identify trends and patterns.</li>
-        <li>Applied statistical and data science techniques to support research objectives and validate hypotheses.</li>
-        <li>Cleaned and structured raw datasets to improve data quality and reduce inconsistencies.</li>
-        <li>Produced 3+ analytical reports translating data insights into structured findings.</li>
-        <li>Collaborated with academic supervisors to refine analytical models and improve result accuracy.</li>
+        <li>Analysed 1,000+ record datasets and produced reports translating findings into stakeholder recommendations.</li>
       </ul>
     </div>
     <div class="job">
@@ -314,10 +358,7 @@
         <span class="job-date">Jan 2023 – Sep 2023 · Freelance · On-site</span>
       </div>
       <ul>
-        <li>Acted as liaison between students and IT services to support adoption of digital learning platforms across 200+ students.</li>
-        <li>Gathered and consolidated 30+ user feedback cases to improve system usability and engagement.</li>
-        <li>Resolved 80%+ of first-line digital platform queries through structured problem-solving.</li>
-        <li>Supported communication of digital transformation initiatives across academic departments.</li>
+        <li>Gathered user feedback and coordinated with IT teams to improve platform usability, resolving 80%+ first-line issues.</li>
       </ul>
     </div>
 
@@ -328,50 +369,18 @@
           <span class="job-title">BSc (Hons) Computer Science — First Class Honours</span>
           <span class="job-company"> — University of Huddersfield, UK</span>
         </div>
-        <span class="job-date">Graduation · Huddersfield, UK</span>
-      </div>
-      <ul>
-        <li>Relevant areas: Requirements Analysis, Systems Design, Data Modelling, Agile Delivery.</li>
-      </ul>
-    </div>
-
-    <h2>Core Skills</h2>
-    <ul class="rde-list">
-      <li>Business process modelling (BPMN)</li>
-      <li>AS-IS / TO-BE analysis</li>
-      <li>Requirements elicitation & documentation</li>
-      <li>User stories & acceptance criteria</li>
-      <li>Stakeholder workshop facilitation</li>
-      <li>Agile / Scrum delivery</li>
-      <li>Gap analysis & prioritisation frameworks</li>
-    </ul>
-
-    <h2>Tools & Methods</h2>
-    <ul class="rde-list">
-      <li>Jira · Confluence · Miro · Lucidchart</li>
-      <li>Agile / Scrum · MoSCoW Prioritisation · Backlog Refinement</li>
-      <li>BPMN process modelling · UML (use case & activity diagrams)</li>
-    </ul>
-
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-cat">
-        <h4>Languages</h4>
-        <p>Python, JavaScript, Java, PHP, SQL</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Frameworks & Web</h4>
-        <p>React, Laravel, Spring Boot, Tailwind CSS, Bootstrap</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Data & Analytics</h4>
-        <p>Pandas, NumPy, Tableau, Excel, Jupyter</p>
-      </div>
-      <div class="skill-cat">
-        <h4>Cloud & Delivery</h4>
-        <p>Docker, Git, GitHub, AWS, REST APIs</p>
+        <span class="job-date">Huddersfield, UK</span>
       </div>
     </div>
+
+    <h2>Skills</h2>
+    <ul class="rde-list">
+      <li>Requirements elicitation and documentation; user stories and acceptance criteria</li>
+      <li>Stakeholder communication, workshop facilitation, and cross-team alignment</li>
+      <li>AS-IS / TO-BE analysis and business process modelling (BPMN)</li>
+      <li>Agile / Scrum delivery and backlog prioritisation</li>
+      <li>Data analysis and reporting (SQL, Excel); tools: Jira, Confluence, Miro</li>
+    </ul>
     <script>
       document.querySelector('.no-print button').addEventListener('click', function() {
         window.print();
