@@ -1,31 +1,31 @@
 {
-  "name": "Abdul Muiz Munshi - Portfolio",
-  "short_name": "AM Portfolio",
-  "description": "Computer Science Graduate & Full Stack Developer Portfolio",
-  "icons": [
-    {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    },
-    {
-      "src": "favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    }
-  ],
-  "theme_color": "#4299e1",
-  "background_color": "#0a0f1a",
-  "display": "standalone",
-  "start_url": "/"
+ "name": "Abdul Muiz Munshi - Portfolio",
+ "short_name": "AM Portfolio",
+ "description": "Abdul Muiz Munshi - full-stack engineer, security & operations focus, London UK",
+ "icons": [
+ {
+ "src": "favicon.svg",
+ "sizes": "any",
+ "type": "image/svg+xml"
+ },
+ {
+ "src": "favicon-16x16.png",
+ "sizes": "16x16",
+ "type": "image/png"
+ },
+ {
+ "src": "favicon-32x32.png",
+ "sizes": "32x32",
+ "type": "image/png"
+ },
+ {
+ "src": "apple-touch-icon.png",
+ "sizes": "180x180",
+ "type": "image/png"
+ }
+ ],
+ "theme_color": "#4299e1",
+ "background_color": "#0a0f1a",
+ "display": "standalone",
+ "start_url": "/"
 }

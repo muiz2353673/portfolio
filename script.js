@@ -1,9 +1,47 @@
 // Test if JavaScript is working
 console.log("JavaScript is loaded and working!");
 
+/**
+ * Single source of truth for the main navbar. Edit this array to add, remove,
+ * or reorder sections (ids must match section id attributes in index.html).
+ */
+const NAV_SECTIONS = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "skills", label: "Skills" },
+  { id: "music", label: "Music" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
+function buildMainNavigation() {
+  const navMenu = document.getElementById("main-nav");
+  if (!navMenu) return;
+
+  navMenu.replaceChildren();
+  const fragment = document.createDocumentFragment();
+
+  NAV_SECTIONS.forEach(({ id, label }) => {
+    const li = document.createElement("li");
+    li.className = "nav-item";
+    const a = document.createElement("a");
+    a.href = `#${id}`;
+    a.className = "nav-link";
+    a.textContent = label;
+    li.appendChild(a);
+    fragment.appendChild(li);
+  });
+
+  navMenu.appendChild(fragment);
+}
+
 // Wait for DOM to be loaded before accessing elements
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM Content Loaded - Initializing all functionality!");
+
+  buildMainNavigation();
 
   // Theme Toggle Functionality
   const themeToggleBtn = document.getElementById("theme-toggle-btn");

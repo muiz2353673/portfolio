@@ -1,390 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdul Muiz Munshi — Resume</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --text: #1a1a1a;
-        --text-muted: #444;
-        --accent: #2563eb;
-        --border: #e5e7eb;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Inter", -apple-system, sans-serif;
-        font-size: 11pt;
-        line-height: 1.5;
-        color: var(--text);
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 32px 40px;
-        background: #fff;
-      }
-      .no-print {
-        margin-bottom: 24px;
-      }
-      .no-print button {
-        font-family: inherit;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 10px 20px;
-        background: var(--accent);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-      .no-print button:hover {
-        background: #1d4ed8;
-      }
-      h1 {
-        font-size: 22pt;
-        font-weight: 700;
-        color: var(--text);
-        margin-bottom: 4px;
-      }
-      .tagline {
-        font-size: 11pt;
-        color: var(--text-muted);
-        margin-bottom: 16px;
-      }
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 20px;
-        font-size: 10pt;
-        color: var(--text-muted);
-        margin-bottom: 24px;
-      }
-      .contact a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      .contact a:hover {
-        text-decoration: underline;
-      }
-      h2 {
-        font-size: 12pt;
-        font-weight: 700;
-        color: var(--text);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        border-bottom: 2px solid var(--accent);
-        padding-bottom: 4px;
-        margin: 24px 0 12px;
-      }
-      .summary {
-        color: var(--text-muted);
-        margin-bottom: 8px;
-      }
-      .job {
-        margin-bottom: 16px;
-      }
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 4px;
-      }
-      .job-title {
-        font-weight: 700;
-        font-size: 11pt;
-        color: var(--text);
-      }
-      .job-company {
-        font-weight: 600;
-        color: var(--accent);
-      }
-      .job-date {
-        font-size: 10pt;
-        color: var(--text-muted);
-      }
-      .job ul {
-        margin: 6px 0 0 18px;
-        padding: 0;
-      }
-      .job li {
-        margin-bottom: 2px;
-        color: var(--text-muted);
-      }
-      .job ul ul {
-        margin: 4px 0 6px 18px;
-        list-style: disc;
-      }
-      .job ul ul li {
-        margin-bottom: 2px;
-      }
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: 8px;
-      }
-      .tags span {
-        font-size: 9pt;
-        background: #f1f5f9;
-        color: var(--text-muted);
-        padding: 2px 8px;
-        border-radius: 4px;
-      }
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-      .skill-cat h4 {
-        font-size: 10pt;
-        font-weight: 600;
-        color: var(--text);
-        margin-bottom: 4px;
-      }
-      .skill-cat p, .skill-cat ul {
-        font-size: 10pt;
-        color: var(--text-muted);
-        margin: 0;
-        padding-left: 14px;
-      }
-      .skill-cat ul {
-        list-style: none;
-        padding-left: 0;
-      }
-      .skill-cat li::before {
-        content: "• ";
-        color: var(--accent);
-      }
-      .consulting-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-      .consulting-card h4 {
-        font-size: 10pt;
-        font-weight: 600;
-        color: var(--text);
-        margin-bottom: 4px;
-      }
-      .consulting-card ul {
-        margin: 0;
-        padding-left: 14px;
-        font-size: 10pt;
-        color: var(--text-muted);
-      }
-      .consulting-card li {
-        margin-bottom: 2px;
-      }
-      .project {
-        margin-bottom: 12px;
-      }
-      .project h4 {
-        font-size: 11pt;
-        font-weight: 600;
-        color: var(--text);
-        margin-bottom: 2px;
-      }
-      .project p {
-        font-size: 10pt;
-        color: var(--text-muted);
-        margin: 0;
-      }
-      .project .tech {
-        font-size: 9pt;
-        color: var(--text-muted);
-        margin-top: 4px;
-      }
-      .rde-list {
-        margin: 6px 0 0 18px;
-        padding: 0;
-        color: var(--text-muted);
-      }
-      .rde-list li {
-        margin-bottom: 6px;
-        font-size: 10pt;
-      }
-      @media print {
-        @page {
-          size: A4;
-          margin: 12mm;
-        }
-        body {
-          padding: 0;
-          max-width: 100%;
-          font-size: 10.5pt;
-          line-height: 1.4;
-        }
-        .no-print {
-          display: none !important;
-        }
-        h1 {
-          font-size: 21pt;
-          margin-bottom: 3px;
-        }
-        .tagline {
-          font-size: 10.5pt;
-          margin-bottom: 10px;
-        }
-        .contact {
-          font-size: 9.6pt;
-          gap: 5px 12px;
-          margin-bottom: 14px;
-        }
-        h2 {
-          font-size: 11pt;
-          margin: 12px 0 7px;
-          padding-bottom: 2px;
-          page-break-after: avoid;
-        }
-        .summary {
-          margin-bottom: 6px;
-        }
-        .job {
-          margin-bottom: 10px;
-        }
-        .job-header {
-          gap: 4px;
-        }
-        .job-title {
-          font-size: 10.5pt;
-        }
-        .job-company,
-        .job-date {
-          font-size: 9.4pt;
-        }
-        .job ul {
-          margin: 5px 0 0 16px;
-        }
-        .job li {
-          margin-bottom: 2px;
-          font-size: 10pt;
-        }
-        .rde-list {
-          margin: 5px 0 0 16px;
-        }
-        .rde-list li {
-          margin-bottom: 2px;
-          font-size: 10pt;
-        }
-        .job, .project {
-          page-break-inside: auto;
-        }
-        .rde-list {
-          page-break-after: avoid;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="no-print">
-      <button type="button" onclick="window.print()">Print / Save as PDF</button>
-    </div>
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Abdul Muiz Munshi - Resume</title>
+ <link
+ href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+ rel="stylesheet"
+ />
+ <style>
+ :root {
+ --text: #1a1a1a;
+ --text-muted: #444;
+ --accent: #2563eb;
+ --border: #e5e7eb;
+ }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: "Inter", -apple-system, sans-serif;
+ font-size: 11pt;
+ line-height: 1.5;
+ color: var(--text);
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 32px 40px;
+ background: #fff;
+ }
+ .no-print {
+ margin-bottom: 24px;
+ }
+ .no-print button {
+ font-family: inherit;
+ font-size: 14px;
+ font-weight: 600;
+ padding: 10px 20px;
+ background: var(--accent);
+ color: #fff;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ }
+ .no-print button:hover {
+ background: #1d4ed8;
+ }
+ h1 {
+ font-size: 22pt;
+ font-weight: 700;
+ color: var(--text);
+ margin-bottom: 4px;
+ }
+ .tagline {
+ font-size: 11pt;
+ color: var(--text-muted);
+ margin-bottom: 16px;
+ }
+ .contact {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px 20px;
+ font-size: 10pt;
+ color: var(--text-muted);
+ margin-bottom: 24px;
+ }
+ .contact a {
+ color: var(--accent);
+ text-decoration: none;
+ }
+ .contact a:hover {
+ text-decoration: underline;
+ }
+ h2 {
+ font-size: 12pt;
+ font-weight: 700;
+ color: var(--text);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ border-bottom: 2px solid var(--accent);
+ padding-bottom: 4px;
+ margin: 24px 0 12px;
+ }
+ .summary {
+ color: var(--text-muted);
+ margin-bottom: 8px;
+ }
+ .job {
+ margin-bottom: 16px;
+ }
+ .job-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ flex-wrap: wrap;
+ gap: 4px;
+ }
+ .job-title {
+ font-weight: 700;
+ font-size: 11pt;
+ color: var(--text);
+ }
+ .job-company {
+ font-weight: 600;
+ color: var(--accent);
+ }
+ .job-date {
+ font-size: 10pt;
+ color: var(--text-muted);
+ }
+ .job ul {
+ margin: 6px 0 0 18px;
+ padding: 0;
+ }
+ .job li {
+ margin-bottom: 2px;
+ color: var(--text-muted);
+ }
+ .job ul ul {
+ margin: 4px 0 6px 18px;
+ list-style: disc;
+ }
+ .job ul ul li {
+ margin-bottom: 2px;
+ }
+ .tags {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 6px;
+ margin-top: 8px;
+ }
+ .tags span {
+ font-size: 9pt;
+ background: #f1f5f9;
+ color: var(--text-muted);
+ padding: 2px 8px;
+ border-radius: 4px;
+ }
+ .skills-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ }
+ .skill-cat h4 {
+ font-size: 10pt;
+ font-weight: 600;
+ color: var(--text);
+ margin-bottom: 4px;
+ }
+ .skill-cat p, .skill-cat ul {
+ font-size: 10pt;
+ color: var(--text-muted);
+ margin: 0;
+ padding-left: 14px;
+ }
+ .skill-cat ul {
+ list-style: none;
+ padding-left: 0;
+ }
+ .skill-cat li::before {
+ content: "• ";
+ color: var(--accent);
+ }
+ .consulting-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 12px;
+ }
+ .consulting-card h4 {
+ font-size: 10pt;
+ font-weight: 600;
+ color: var(--text);
+ margin-bottom: 4px;
+ }
+ .consulting-card ul {
+ margin: 0;
+ padding-left: 14px;
+ font-size: 10pt;
+ color: var(--text-muted);
+ }
+ .consulting-card li {
+ margin-bottom: 2px;
+ }
+ .project {
+ margin-bottom: 12px;
+ }
+ .project h4 {
+ font-size: 11pt;
+ font-weight: 600;
+ color: var(--text);
+ margin-bottom: 2px;
+ }
+ .project p {
+ font-size: 10pt;
+ color: var(--text-muted);
+ margin: 0;
+ }
+ .project .tech {
+ font-size: 9pt;
+ color: var(--text-muted);
+ margin-top: 4px;
+ }
+ .rde-list {
+ margin: 6px 0 0 18px;
+ padding: 0;
+ color: var(--text-muted);
+ }
+ .rde-list li {
+ margin-bottom: 6px;
+ font-size: 10pt;
+ }
+ @media print {
+ @page {
+ size: A4;
+ margin: 12mm;
+ }
+ body {
+ padding: 0;
+ max-width: 100%;
+ font-size: 10.5pt;
+ line-height: 1.4;
+ }
+ .no-print {
+ display: none !important;
+ }
+ h1 {
+ font-size: 21pt;
+ margin-bottom: 3px;
+ }
+ .tagline {
+ font-size: 10.5pt;
+ margin-bottom: 10px;
+ }
+ .contact {
+ font-size: 9.6pt;
+ gap: 5px 12px;
+ margin-bottom: 14px;
+ }
+ h2 {
+ font-size: 11pt;
+ margin: 12px 0 7px;
+ padding-bottom: 2px;
+ page-break-after: avoid;
+ }
+ .summary {
+ margin-bottom: 6px;
+ }
+ .job {
+ margin-bottom: 10px;
+ }
+ .job-header {
+ gap: 4px;
+ }
+ .job-title {
+ font-size: 10.5pt;
+ }
+ .job-company,
+ .job-date {
+ font-size: 9.4pt;
+ }
+ .job ul {
+ margin: 5px 0 0 16px;
+ }
+ .job li {
+ margin-bottom: 2px;
+ font-size: 10pt;
+ }
+ .rde-list {
+ margin: 5px 0 0 16px;
+ }
+ .rde-list li {
+ margin-bottom: 2px;
+ font-size: 10pt;
+ }
+ .job, .project {
+ page-break-inside: auto;
+ }
+ .rde-list {
+ page-break-after: avoid;
+ }
+ }
+ </style>
+ </head>
+ <body>
+ <div class="no-print">
+ <button type="button" onclick="window.print()">Print / Save as PDF</button>
+ </div>
 
-    <h1>Abdul Muiz Munshi</h1>
-    <p class="tagline">Business Analyst · Requirements &amp; Process Improvement</p>
-    <div class="contact">
-      <span>London, United Kingdom</span>
-      <span>·</span>
-      <a href="mailto:muizmunshi@gmail.com">muizmunshi@gmail.com</a>
-      <span>·</span>
-      <a href="tel:+4407818307416"> 07818307416</a>
-      <span>·</span>
-      <a href="https://www.linkedin.com/in/abdul-muiz-munshi-6ab4141b8" target="_blank" rel="noopener">LinkedIn</a>
-      <span>·</span>
-      <a href="https://github.com/muiz2353673" target="_blank" rel="noopener">GitHub</a>
-      <span>·</span>
-      <a href="https://muizmunshi.vercel.app" target="_blank" rel="noopener">Portfolio</a>
-    </div>
+ <h1>Abdul Muiz Munshi</h1>
+ <p class="tagline">Full-Stack Software Engineer | Security-Focused | Targeting UK SOC &amp; Security Operations (London, UK)</p>
+ <div class="contact">
+ <span>London, United Kingdom</span>
+ <span>·</span>
+ <a href="mailto:muizmunshi@gmail.com">muizmunshi@gmail.com</a>
+ <span>·</span>
+ <a href="tel:+4407818307416"> 07818307416</a>
+ <span>·</span>
+ <a href="https://www.linkedin.com/in/abdul-muiz-munshi-6ab4141b8" target="_blank" rel="noopener">LinkedIn</a>
+ <span>·</span>
+ <a href="https://github.com/muiz2353673" target="_blank" rel="noopener">GitHub</a>
+ <span>·</span>
+ <a href="https://muizmunshi.vercel.app" target="_blank" rel="noopener">Portfolio</a>
+ </div>
 
-    <h2>Professional Summary</h2>
-    <p class="summary">
-      Business-focused analyst with a technical background and First-Class Computer Science degree, translating stakeholder needs into clear requirements and user stories.
-      Strong in AS-IS/TO-BE analysis, Agile delivery, and data-informed process improvement.
-    </p>
+ <h2>Professional summary</h2>
+ <p class="summary">
+ Full-stack software engineer (First-Class BSc Computer Science) with live delivery experience across <strong>APIs</strong>, <strong>data</strong>, and <strong>cloud-style deployments</strong> (e.g. <strong>AWS</strong>, <strong>Docker</strong>). I know how services are put together, how they break in production, and what <strong>signals you need in logs</strong> to explain behaviour, abuse, or failure. I make <strong>risk-aware</strong> calls under time pressure, work from evidence, and communicate clearly. Moving deliberately into <strong>UK SOC / security operations</strong> roles: <strong>monitoring, log analysis, incident triage, and escalation</strong> - applying a production engineer’s view of systems, not theory-only security.
+ </p>
 
-    <h2>Professional Experience</h2>
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Software Developer (Business Analysis Focus)</span>
-          <span class="job-company"> — Letterbox Distribution</span>
-        </div>
-        <span class="job-date">Sep 2025 – Present · London, UK</span>
-      </div>
-      <ul>
-        <li>Led stakeholder workshops, converting business needs into 50+ requirements and 80+ user stories.</li>
-        <li>Mapped AS-IS/TO-BE workflows in BPMN to identify gaps and prioritise improvements.</li>
-        <li>Managed scope and acceptance criteria in Agile sprints, contributing to 50-80% faster document retrieval and 95%+ sprint acceptance.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Student Support Assistant</span>
-          <span class="job-company"> — University of Huddersfield</span>
-        </div>
-        <span class="job-date">Sep 2023 – Sep 2025 · Part-time · On-site</span>
-      </div>
-      <ul>
-        <li>Resolved 50-70 weekly queries with 90%+ first-contact resolution through structured triage and escalation.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Research Assistant Intern</span>
-          <span class="job-company"> — National Institute of Technology Srinagar</span>
-        </div>
-        <span class="job-date">Jun 2024 – Aug 2024 · Internship · Hybrid</span>
-      </div>
-      <ul>
-        <li>Analysed 1,000+ record datasets and produced reports translating findings into stakeholder recommendations.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">Student Digital Leader</span>
-          <span class="job-company"> — Study Group</span>
-        </div>
-        <span class="job-date">Jan 2023 – Sep 2023 · Freelance · On-site</span>
-      </div>
-      <ul>
-        <li>Gathered user feedback and coordinated with IT teams to improve platform usability, resolving 80%+ first-line issues.</li>
-      </ul>
-    </div>
+ <h2>Security operations focus</h2>
+ <ul class="rde-list" style="margin-top: 6px; margin-bottom: 12px;">
+ <li>Comfort with <strong>log and event sources</strong> that matter in real investigations: application/API responses, auth outcomes, access patterns, and infrastructure health signals (where they exist - or don’t).</li>
+ <li>Realistic view of <strong>common failure and abuse cases</strong>: account misuse, over-privileged access, data exposed by misconfig, service degradation, suspicious bulk activity.</li>
+ <li><strong>Detection mindset</strong>: distinguish signal from noise; know what to record and what a timeline should answer.</li>
+ <li>Strong <strong>debugging discipline</strong> - hypothesis, evidence, narrow scope - maps to structured <strong>incident investigation</strong> in a tiered team.</li>
+ <li><strong>Operations-oriented thinking</strong>: what “normal” looks like, what to alert on proportionately, and when to escalate.</li>
+ </ul>
 
-    <h2>Education</h2>
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <span class="job-title">BSc (Hons) Computer Science — First Class Honours</span>
-          <span class="job-company"> — University of Huddersfield, UK</span>
-        </div>
-        <span class="job-date">Huddersfield, UK</span>
-      </div>
-    </div>
+ <h2>Security-focused experience</h2>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">Security assessment - Botium Toys (case study)</span>
+ </div>
+ </div>
+ <ul>
+ <li>Led a structured <strong>security and controls assessment</strong> across a small retail-style organisation: on-prem and online systems, infrastructure, and physical access paths - not a tick-box only review.</li>
+ <li>Recorded material weaknesses: <strong>weak and inconsistent access control</strong>, <strong>inadequate encryption</strong> for sensitive handling, <strong>gaps in backup and disaster recovery</strong>, and <strong>no network IDS / intrusion-style visibility</strong> - i.e. limited ability to <strong>detect</strong> malicious or anomalous activity.</li>
+ <li>Linked outcomes to <strong>PCI DSS</strong>, <strong>GDPR</strong>, and <strong>SOC</strong>-style expectations (controls and evidence, not just policy intent) and gave <strong>prioritised, practical recommendations</strong>.</li>
+ <li>Direct link to <strong>SOC</strong> work: the same gaps (missing <strong>logging</strong>, <strong>monitoring</strong>, and <strong>detection</strong> coverage) are what leave teams blind; fixing them is as much an <strong>operations and telemetry</strong> problem as a paperwork one.</li>
+ </ul>
+ </div>
 
-    <h2>Skills</h2>
-    <ul class="rde-list">
-      <li>Requirements elicitation and documentation; user stories and acceptance criteria</li>
-      <li>Stakeholder communication, workshop facilitation, and cross-team alignment</li>
-      <li>AS-IS / TO-BE analysis and business process modelling (BPMN)</li>
-      <li>Agile / Scrum delivery and backlog prioritisation</li>
-      <li>Data analysis and reporting (SQL, Excel); tools: Jira, Confluence, Miro</li>
-    </ul>
-    <script>
-      document.querySelector('.no-print button').addEventListener('click', function() {
-        window.print();
-      });
-    </script>
-  </body>
+ <h2>Professional experience</h2>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">Software Developer</span>
+ <span class="job-company"> - Letterbox Distribution</span>
+ </div>
+ <span class="job-date">Sep 2025 - Present · London, UK</span>
+ </div>
+ <ul>
+ <li><strong>Production delivery:</strong> features shipped in a live product context (requirements, user stories, process mapping, Agile sprints). Grounding in <strong>what actually runs in prod</strong>: integrations, data flows, and change risk.</li>
+ <li>Works across the stack in practice: <strong>APIs</strong>, <strong>data</strong>, and <strong>deployment</strong> assumptions. Habit of asking where <strong>trust boundaries</strong> are, <strong>misuse cases</strong> for a feature, and <strong>operational failure modes</strong> (what would you need in <strong>logs and traces</strong> to see it?).</li>
+ <li><strong>Measurable impact:</strong> 50+ requirements, 80+ user stories; internal tooling that cut document search time an estimated <strong>50-80%</strong> for 10-12 people; <strong>95%+</strong> sprint acceptance - shows reliability, adoption, and delivery under constraint.</li>
+ </ul>
+ </div>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">Student Support Assistant</span>
+ <span class="job-company"> - University of Huddersfield</span>
+ </div>
+ <span class="job-date">Sep 2023 - Sep 2025 · Part-time · On-site</span>
+ </div>
+ <ul>
+ <li>High-volume <strong>first-line</strong> contact (50-70 students/week): <strong>triage</strong> by impact and urgency, short written notes, and <strong>escalation</strong> on a clear path. <strong>90%+</strong> first-contact resolution - translates to SOC-style <strong>initial classification</strong> and <strong>handover discipline</strong>.</li>
+ </ul>
+ </div>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">Research Assistant Intern</span>
+ <span class="job-company"> - National Institute of Technology Srinagar</span>
+ </div>
+ <span class="job-date">Jun 2024 - Aug 2024 · Internship · Hybrid</span>
+ </div>
+ <ul>
+ <li>Structured <strong>data analysis</strong> on 1,000+ record sets; <strong>evidence-led reporting</strong> and defensible conclusions for non-technical readers - relevant to <strong>case documentation</strong> and <strong>handover quality</strong> in an ops environment.</li>
+ </ul>
+ </div>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">Student Digital Leader</span>
+ <span class="job-company"> - Study Group</span>
+ </div>
+ <span class="job-date">Jan 2023 - Sep 2023 · Freelance · On-site</span>
+ </div>
+ <ul>
+ <li>First-line for <strong>IT and platform</strong> issues (200+ students): reproduce, <strong>document</strong>, <strong>escalate</strong> to central IT where needed, <strong>80%+</strong> resolution at the desk - <strong>priority</strong> and <strong>repeatable process</strong> under variable load.</li>
+ </ul>
+ </div>
+
+ <h2>Education</h2>
+ <div class="job">
+ <div class="job-header">
+ <div>
+ <span class="job-title">BSc (Hons) Computer Science - First Class Honours</span>
+ <span class="job-company"> - University of Huddersfield, UK</span>
+ </div>
+ <span class="job-date">Huddersfield, UK</span>
+ </div>
+ </div>
+
+ <h2>Skills</h2>
+ <ul class="rde-list">
+ <li>
+ <strong>Security &amp; systems thinking</strong> - <strong>Attack surfaces</strong> (e.g. APIs, <strong>authentication / sessions</strong>, admin paths); <strong>data access</strong> and exposure; <strong>least privilege</strong> and over-broad roles; <strong>logging and monitoring</strong> gaps; questions that support <strong>incident-relevant</strong> response - without overstating job-title security work.
+ </li>
+ <li>
+ <strong>Engineering</strong> - Python, JavaScript, Java, SQL; React, Spring Boot, Laravel, <strong>REST APIs</strong>; Git/GitHub; data analysis and reporting (Pandas, notebooks as used).
+ </li>
+ <li>
+ <strong>Infrastructure</strong> - <strong>Docker</strong>, <strong>AWS</strong>, Linux; builds and <strong>misconfiguration</strong> as a real part of what can go wrong in production.</li>
+ <li>
+ <strong>Delivery &amp; communication</strong> - Agile/Scrum, workshops, requirements and user stories; <strong>clear writing</strong> for handover; Jira, Confluence, Miro, Lucidchart.
+ </li>
+ </ul>
+
+ <h2>Selected work (high level)</h2>
+ <ul class="rde-list">
+ <li>
+ <strong>Beaccon / Internal office (Letterbox)</strong> - production council/community platform and internal document hub; security angles documented in portfolio (auth, PII, APIs, logging).
+ </li>
+ <li>
+ <strong>Other GitHub</strong> - e.g. Spring Boot APIs, server monitoring (Python), event app, recommender, ML (hotel cancellations); see portfolio for per-project risk and monitoring notes.
+ </li>
+ </ul>
+ <script>
+ document.querySelector('.no-print button').addEventListener('click', function() {
+ window.print();
+ });
+ </script>
+ </body>
 </html>

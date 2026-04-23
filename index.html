@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Abdul Muiz Munshi - Associate Business Analyst (Client-Focused). Stakeholder management, requirements gathering, process mapping, and translating business needs into system solutions. London, UK."
+      content="Abdul Muiz Munshi - software engineer with a security and operations (SOC) focus. APIs, cloud, and monitoring. Targeting UK SOC and security operations roles. London, UK."
     />
     <meta
       name="keywords"
-      content="Abdul Muiz Munshi, Business Analyst, Requirements Gathering, Stakeholder Management, Process Improvement, Gap Analysis, Digital Transformation, Systems Analysis, Agile, Solution Design, London, Portfolio"
+      content="Abdul Muiz Munshi, Security Engineer, SOC, Security Operations, Monitoring, Log Analysis, Incident Response, AWS, Docker, London, UK, Portfolio, Beaccon, Botium"
     />
     <meta name="author" content="Abdul Muiz Munshi" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link
       rel="icon"
@@ -28,29 +27,23 @@
       href="assets/favicon-16x16.png"
     />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-
-    <!-- Web Manifest -->
     <link rel="manifest" href="assets/site.webmanifest" />
     <meta name="theme-color" content="#4299e1" />
     <meta name="msapplication-TileColor" content="#4299e1" />
 
-    <!-- SEO Meta -->
     <meta
-      name="description"
-      content="Abdul Muiz Munshi - Associate Business Analyst (Client-Focused). Requirements gathering, process mapping, stakeholder management. BSc First Class CS. Letterbox Distribution."
+      property="og:title"
+      content="Abdul Muiz Munshi - Software Engineer | Security &amp; Operations (London)"
     />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Abdul Muiz Munshi - Associate Business Analyst (Client-Focused)" />
     <meta
       property="og:description"
-      content="Business Analyst · Stakeholder Management · Requirements Gathering · Process Improvement · Digital Transformation · London, UK"
+      content="Full-stack delivery background with a SOC-oriented lens: monitoring, risk, logs, and what breaks in production. London, UK. Open to UK SOC and security operations roles."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://muizmunshi.vercel.app" />
     <meta property="og:image" content="assets/og-image.jpg" />
 
-    <title>Abdul Muiz Munshi - Portfolio</title>
+    <title>Abdul Muiz Munshi - Security &amp; Operations | Software Engineer (London)</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -60,48 +53,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <!-- Formspree is used for contact form handling -->
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
           <a href="#home">Portfolio</a>
         </div>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#experience" class="nav-link">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a href="#education" class="nav-link">Education</a>
-          </li>
-          <li class="nav-item">
-            <a href="#skills" class="nav-link">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a href="#music" class="nav-link">Music</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
+        <ul class="nav-menu" id="main-nav">
+          <!-- built by buildMainNavigation() in script.js -->
         </ul>
         <div class="theme-toggle">
-          <button id="theme-toggle-btn" class="theme-btn">
-            <i class="fas fa-sun" id="sun-icon"></i>
-            <i class="fas fa-moon" id="moon-icon"></i>
+          <button id="theme-toggle-btn" class="theme-btn" type="button">
+            <i class="fas fa-sun" id="sun-icon" aria-hidden="true"></i>
+            <i class="fas fa-moon" id="moon-icon" aria-hidden="true"></i>
           </button>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" aria-label="Open menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -109,7 +77,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-container">
         <div class="hero-content">
@@ -117,17 +84,17 @@
             Hi, I'm <span class="highlight">Abdul Muiz Munshi</span>
           </h1>
           <p class="hero-subtitle">
-            Associate Business Analyst (Client-Focused) · Stakeholder Management · Requirements & Process Improvement
+            Software engineer - security and operations (SOC) focus - London, UK
           </p>
           <p class="hero-description">
-            Business Analyst–oriented Software Developer with a First-Class Computer Science degree. Skilled in requirements elicitation, process mapping, solution design, and Agile delivery. I translate business needs into structured, measurable solutions that improve efficiency and user engagement.
+            I have shipped real software: APIs, data, and deployments using stacks you see in production, including AWS and Docker. I also know the delivery side: requirements, user stories, and process mapping. That means I do not treat security as theory: I think about who can access what, what fails in production, and what you need in logs to support triage and investigation.
           </p>
           <p class="hero-tagline">
-            Bridging business stakeholders and engineering teams across operational and client-facing platforms.
+            Securing and monitoring systems: evidence over slogans, and operations you can run when something goes wrong.
           </p>
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="#projects" class="btn btn-primary">View my work</a>
+            <a href="#contact" class="btn btn-secondary">Get in touch</a>
             <a
               href="resume.html"
               class="btn btn-resume"
@@ -135,8 +102,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fas fa-download"></i>
-              Download Resume
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download resume
             </a>
           </div>
         </div>
@@ -147,23 +114,25 @@
         </div>
       </div>
       <div class="scroll-indicator">
-        <a href="#about">
-          <i class="fas fa-chevron-down"></i>
+        <a href="#about" aria-label="Scroll to about">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </a>
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content" style="display: flex; flex-direction: row; gap: 2rem;">
-          <div class="about-text" style="width: 100%;">
+        <h2 class="section-title">About me</h2>
+        <div class="about-content" style="display: flex; flex-direction: row; gap: 2rem">
+          <div class="about-text" style="width: 100%">
             <p>
-              Business Analyst–oriented Software Developer with a First-Class Computer Science degree and strong experience bridging business stakeholders and engineering teams. Skilled in requirements elicitation, process mapping, solution design, and Agile delivery across operational and client-facing platforms.
+              First-Class BSc Computer Science graduate and full-stack software engineer. I know how services are put together, how they break in production, and what signals you need in logs to explain behaviour, abuse, or failure. I make risk-aware calls under time pressure, work from evidence, and communicate clearly. I am moving deliberately into UK SOC and security operations roles: monitoring, log analysis, incident triage, and escalation, with a production engineer's view of systems, not security theory alone.
             </p>
             <p>
-              Recent highlights: 10+ stakeholder workshops, 50+ requirements documented, 80+ user stories with acceptance criteria, 6+ AS-IS/TO-BE process mappings, 95%+ sprint acceptance rate. Reduced document search time by 50–80% for 10–12 staff. Prior roles include Student Digital Leader (200+ students), Student Support Assistant (50–70 students/week), and Research Assistant Intern (1,000+ data points analysed).
+              Comfort with the delivery lifecycle means I can talk to product and engineering without hand-waving. I look for trust boundaries, misuse cases, and operational failure modes: what you would need in traces and log lines to see an issue, not just a diagram on a slide.
+            </p>
+            <p>
+              I am based in London and have worked across support and digital leadership roles with high contact volume, triage, and escalation, which maps well to structured handover in tiered operations teams.
             </p>
             <div class="about-stats">
               <div class="stat">
@@ -171,111 +140,170 @@
                 <p>BSc (Hons) CS</p>
               </div>
               <div class="stat">
-                <h3>Client-focused</h3>
-                <p>BA & Stakeholders</p>
+                <h3>Build &amp; ship</h3>
+                <p>APIs, AWS, Docker</p>
               </div>
               <div class="stat">
                 <h3>London</h3>
-                <p>United Kingdom 🇬🇧</p>
+                <p>United Kingdom <span role="img" aria-label="UK">&#127468;&#127463;</span></p>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="security-thinking" class="about">
       <div class="container">
-        <h2 class="section-title">Professional Experience</h2>
+        <h2 class="section-title">Security &amp; systems thinking</h2>
+        <p>
+          I reason about where systems are weak, what to monitor, and how to separate signal from noise. The list below is how I frame problems: not every control is in place everywhere, but the questions are the same ones you need in a SOC or security operations context.
+        </p>
+        <ul class="security-thinking-list">
+          <li>
+            Attack surfaces: APIs, authentication and sessions, admin paths, and anything exposed by misconfiguration, not just "the firewall."
+          </li>
+          <li>
+            Least privilege and access-control risk: over-broad roles, shared credentials, and separation of duties gaps that show up in real incidents.
+          </li>
+          <li>
+            Logging and monitoring: what to record, what to alert on, and which questions a timeline should answer when something looks wrong.
+          </li>
+          <li>
+            Cloud and infrastructure: AWS, Docker, and networking as part of the picture, including misconfiguration and exposure, not only application bugs.
+          </li>
+          <li>
+            Debugging as investigation: hypothesis, evidence, and narrowing scope, which lines up with structured incident handling in a tiered team.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="security-experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Security-focused experience</h2>
         <div class="experience-timeline">
           <div class="experience-card">
             <div class="experience-header">
               <div class="experience-role">
-                <h3>Software Developer (Business Analysis Focus)</h3>
-                <p class="experience-company">Letterbox Distribution</p>
+                <h3>Security assessment: Botium Toys (case study)</h3>
+                <p class="experience-company">Structured review (people, process, technology)</p>
               </div>
-              <span class="experience-date">Sep 2025 – Present · London, UK 🇬🇧</span>
             </div>
-            <ul class="experience-list">
-              <li>In addition to development responsibilities, work closely with business stakeholders to facilitate requirement workshops, translate business needs into structured user stories, and conduct AS-IS / TO-BE process mapping.</li>
-              <li>Manage scope and trade-offs within Agile delivery; ensure alignment between stakeholder expectations and technical feasibility.</li>
-              <li><strong>Key impact:</strong> 50+ documented requirements; 80+ user stories delivered; 50–80% reduction in document search time; 95%+ sprint acceptance rate.</li>
-            </ul>
-            <div class="experience-tags">
-              <span>Requirements Elicitation</span>
-              <span>Stakeholder Workshops</span>
-              <span>Process Mapping</span>
-              <span>Agile / Scrum</span>
-            </div>
-          </div>
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-role">
-                <h3>Student Support Assistant</h3>
-                <p class="experience-company">University of Huddersfield</p>
+            <p class="project-lead">
+              A retail-style case study: on-prem and online systems, infrastructure, and physical access paths, mapped to PCI DSS, GDPR, and SOC-style expectations, with prioritised recommendations. Directly relevant to SOC: telemetry gaps, control versus reality, and what you would want on a dashboard when things go wrong.
+            </p>
+            <div class="project-security-block">
+              <ul class="security-experience-list">
+                <li>
+                  Led a structured security and controls assessment across a small organisation: not a tick-box-only review; coverage included systems, infrastructure, and physical access where relevant.
+                </li>
+                <li>
+                  Recorded material weaknesses: weak and inconsistent access control, inadequate encryption for sensitive handling, gaps in backup and disaster recovery, and no network IDS-style visibility, so limited ability to detect malicious or anomalous activity.
+                </li>
+                <li>
+                  Linked outcomes to PCI DSS, GDPR, and SOC-type expectations, focused on controls and evidence, and produced prioritised, practical recommendations.
+                </li>
+              </ul>
+              <p>
+                <strong>SOC angle:</strong> the same missing logging, monitoring, and detection coverage is what leaves teams blind in real operations. Improving that is as much a telemetry and engineering problem as a policy exercise.
+              </p>
+              <div class="experience-tags" style="margin-top: 0.75rem">
+                <span>Security assessment</span>
+                <span>Compliance mapping</span>
+                <span>IDS / visibility</span>
+                <span>PCI / GDPR / SOC</span>
               </div>
-              <span class="experience-date">Sep 2023 – Sep 2025 · Part-time</span>
-            </div>
-            <ul class="experience-list">
-              <li>Delivered front-line support to 50–70 students per week across academic and digital service queries.</li>
-              <li>Maintained 90%+ first-contact resolution rate.</li>
-              <li>Managed stakeholder communication during peak academic periods.</li>
-              <li>Escalated complex cases following structured resolution processes.</li>
-            </ul>
-            <div class="experience-tags">
-              <span>Stakeholder Communication</span>
-              <span>First-Contact Resolution</span>
-            </div>
-          </div>
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-role">
-                <h3>Research Assistant Intern</h3>
-                <p class="experience-company">National Institute of Technology Srinagar</p>
-              </div>
-              <span class="experience-date">Jun 2024 – Aug 2024 · Internship · Hybrid</span>
-            </div>
-            <ul class="experience-list">
-              <li>Conducted exploratory data analysis on datasets containing 1,000+ records to identify trends and patterns.</li>
-              <li>Applied statistical and data science techniques to support research objectives and validate hypotheses.</li>
-              <li>Cleaned and structured raw datasets to improve data quality and reduce inconsistencies.</li>
-              <li>Produced 3+ analytical reports translating data insights into structured findings.</li>
-              <li>Collaborated with academic supervisors to refine analytical models and improve result accuracy.</li>
-            </ul>
-            <div class="experience-tags">
-              <span>Exploratory Data Analysis</span>
-              <span>Data Science</span>
-              <span>Statistical Techniques</span>
-              <span>Analytical Reporting</span>
-            </div>
-          </div>
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-role">
-                <h3>Student Digital Leader</h3>
-                <p class="experience-company">Study Group</p>
-              </div>
-              <span class="experience-date">Jan 2023 – Sep 2023 · Freelance</span>
-            </div>
-            <ul class="experience-list">
-              <li>Acted as liaison between students and IT services to support adoption of digital learning platforms across 200+ students.</li>
-              <li>Gathered and consolidated 30+ user feedback cases to improve system usability and engagement.</li>
-              <li>Resolved 80%+ of first-line digital platform queries through structured problem-solving.</li>
-              <li>Supported communication of digital transformation initiatives across academic departments.</li>
-            </ul>
-            <div class="experience-tags">
-              <span>User Feedback</span>
-              <span>Platform Adoption</span>
-              <span>Digital Transformation</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Education Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Professional experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-role">
+                <h3>Software developer</h3>
+                <p class="experience-company">Letterbox Distribution</p>
+              </div>
+              <span class="experience-date">Sep 2025 - Present <span role="img" aria-label="UK">&#127468;&#127463;</span> London, UK</span>
+            </div>
+            <ul class="experience-list">
+              <li>
+                <strong>Production delivery:</strong> features shipped in a live product context (requirements, user stories, process mapping, Agile sprints), with grounding in what actually runs in production: integrations, data flows, and change risk, plus habit of asking where trust boundaries are, what misuse cases exist, and what you would need in logs and traces to see a failure.
+              </li>
+              <li>
+                <strong>Measurable impact:</strong> 50+ requirements, 80+ user stories; internal tooling that cut document search time an estimated 50-80% for 10-12 people; 95%+ sprint acceptance, showing reliability, adoption, and delivery under constraint.
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span>APIs &amp; delivery</span>
+              <span>Agile / Scrum</span>
+              <span>Production context</span>
+            </div>
+          </div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-role">
+                <h3>Student support assistant</h3>
+                <p class="experience-company">University of Huddersfield</p>
+              </div>
+              <span class="experience-date">Sep 2023 - Sep 2025 - Part-time</span>
+            </div>
+            <ul class="experience-list">
+              <li>
+                High-volume first-line contact (50-70 students per week): triage by impact and urgency, short written notes, and escalation on a clear path, with 90%+ first-contact resolution, comparable to initial classification and handover discipline in a SOC-style workflow.
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span>Triage</span>
+              <span>Escalation</span>
+            </div>
+          </div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-role">
+                <h3>Research assistant intern</h3>
+                <p class="experience-company">National Institute of Technology Srinagar</p>
+              </div>
+              <span class="experience-date">Jun 2024 - Aug 2024 - Internship - Hybrid</span>
+            </div>
+            <ul class="experience-list">
+              <li>
+                Structured data analysis on 1,000+ record sets; evidence-led reporting and defensible conclusions for non-technical readers, relevant to case documentation and handover quality in an operations environment.
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span>Data analysis</span>
+              <span>Reporting</span>
+            </div>
+          </div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-role">
+                <h3>Student digital leader</h3>
+                <p class="experience-company">Study Group</p>
+              </div>
+              <span class="experience-date">Jan 2023 - Sep 2023 - Freelance</span>
+            </div>
+            <ul class="experience-list">
+              <li>
+                First-line for IT and platform issues (200+ students): reproduce, document, and escalate to central IT where needed, with 80%+ resolution at the desk, building priority and repeatable process under variable load.
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span>IT support</span>
+              <span>Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="education" class="education">
       <div class="container">
         <h2 class="section-title">Education</h2>
@@ -283,435 +311,186 @@
           <div class="experience-card">
             <div class="experience-header">
               <div class="experience-role">
-                <h3>BSc (Hons) Computer Science — First Class Honours</h3>
+                <h3>BSc (Hons) Computer Science (First Class Honours)</h3>
                 <p class="experience-company">University of Huddersfield</p>
               </div>
-              <span class="experience-date">Graduation · Huddersfield, UK</span>
+              <span class="experience-date">Graduation - Huddersfield, UK</span>
             </div>
             <ul class="experience-list">
-              <li>Relevant areas: Requirements Analysis, Systems Design, Data Modelling, Agile Delivery.</li>
+              <li>Relevant areas: software engineering, systems and networking, databases, security concepts, and Agile delivery, supporting both build and operations-style reasoning.</li>
             </ul>
             <div class="experience-tags">
-              <span>Requirements Analysis</span>
-              <span>Systems Design</span>
-              <span>Data Modelling</span>
-              <span>Agile Delivery</span>
+              <span>Computer science</span>
+              <span>First Class</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title">Core Skills</h2>
-        <p class="skills-intro">Requirements elicitation, process mapping, solution design, and Agile delivery—bridging business stakeholders and engineering teams.</p>
+        <h2 class="section-title">Core skills</h2>
+        <p class="skills-intro">
+          Security and systems thinking alongside engineering delivery. Full bullets below.
+        </p>
 
-        <ul class="innovation-rde-list" style="max-width: 640px; margin: 0 auto 2rem;">
-          <li>Requirements elicitation & documentation</li>
-          <li>User stories & acceptance criteria</li>
-          <li>AS-IS / TO-BE process mapping</li>
-          <li>Stakeholder workshop facilitation</li>
-          <li>Agile / Scrum delivery</li>
-          <li>Gap analysis & prioritisation frameworks</li>
+        <ul class="innovation-rde-list" style="max-width: 640px; margin: 0 auto 2rem">
+          <li>
+            Security and systems: attack surfaces (APIs, auth, sessions, admin), least privilege, logging and monitoring gaps, and incident-relevant questions without overstating job-title security work. I focus on what an attacker or misconfiguration could actually touch, and what evidence you would have in logs if something went wrong, not a generic compliance checklist in isolation.
+          </li>
+          <li>
+            Engineering: Python, JavaScript, Java, SQL; React, Spring Boot, Laravel, REST APIs; Git and GitHub; data analysis and reporting (Pandas, notebooks as used). Enough depth to work with code and APIs in anger: read stack traces, reason about request flows, and discuss fixes with developers without bluffing.
+          </li>
+          <li>
+            Infrastructure: Docker, AWS, Linux; builds and misconfiguration as a real part of what can go wrong in production. I treat cloud and containers as part of the threat and operations picture: exposed services, bad defaults, and missing visibility, not only application-layer bugs.
+          </li>
+          <li>
+            Delivery and communication: Agile/Scrum, workshops, requirements and user stories; clear writing for handover; Jira, Confluence, Miro, Lucidchart. Useful for SOC-adjacent roles: incident notes, runbooks, and handover to the next shift need the same discipline as good sprint documentation.
+          </li>
         </ul>
 
-        <h3 class="consulting-skills-title">Tools & Methods</h3>
+        <h3 class="consulting-skills-title">Tools &amp; methods</h3>
         <div class="tools-methods-tags">
           <span>Jira</span>
           <span>Confluence</span>
           <span>Miro</span>
           <span>Lucidchart</span>
           <span>Agile / Scrum</span>
-          <span>MoSCoW Prioritisation</span>
-          <span>Backlog Refinement</span>
+          <span>Git / GitHub</span>
+          <span>REST APIs</span>
+          <span>Docker</span>
+          <span>AWS</span>
         </div>
 
-        <p class="skills-tech-label">Technical fluency (to collaborate with developers)</p>
-        <!-- Floating Skills -->
+        <p class="skills-tech-label">Representative stack (click a floating tile)</p>
         <div class="floating-skills-container">
-          <!-- Programming Languages -->
           <div class="floating-skill" data-skill="Python">
-            <i class="fab fa-python"></i>
+            <i class="fab fa-python" aria-hidden="true"></i>
             <span>Python</span>
           </div>
           <div class="floating-skill" data-skill="JavaScript">
-            <i class="fab fa-js-square"></i>
+            <i class="fab fa-js-square" aria-hidden="true"></i>
             <span>JavaScript</span>
           </div>
           <div class="floating-skill" data-skill="Java">
-            <i class="fab fa-java"></i>
+            <i class="fab fa-java" aria-hidden="true"></i>
             <span>Java</span>
           </div>
           <div class="floating-skill" data-skill="PHP">
-            <i class="fab fa-php"></i>
+            <i class="fab fa-php" aria-hidden="true"></i>
             <span>PHP</span>
           </div>
           <div class="floating-skill" data-skill="SQL">
-            <i class="fas fa-database"></i>
+            <i class="fas fa-database" aria-hidden="true"></i>
             <span>SQL</span>
           </div>
-
-          <!-- Frameworks & Libraries -->
           <div class="floating-skill" data-skill="React">
-            <i class="fab fa-react"></i>
+            <i class="fab fa-react" aria-hidden="true"></i>
             <span>React</span>
           </div>
           <div class="floating-skill" data-skill="Laravel">
-            <i class="fab fa-laravel"></i>
+            <i class="fab fa-laravel" aria-hidden="true"></i>
             <span>Laravel</span>
           </div>
           <div class="floating-skill" data-skill="Spring Boot">
-            <i class="fas fa-leaf"></i>
+            <i class="fas fa-leaf" aria-hidden="true"></i>
             <span>Spring Boot</span>
           </div>
           <div class="floating-skill" data-skill="Tailwind CSS">
-            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-css3-alt" aria-hidden="true"></i>
             <span>Tailwind CSS</span>
           </div>
           <div class="floating-skill" data-skill="Bootstrap">
-            <i class="fab fa-bootstrap"></i>
+            <i class="fab fa-bootstrap" aria-hidden="true"></i>
             <span>Bootstrap</span>
           </div>
-
-          <!-- Data & Analytics -->
           <div class="floating-skill" data-skill="Pandas">
-            <i class="fab fa-python"></i>
+            <i class="fab fa-python" aria-hidden="true"></i>
             <span>Pandas</span>
           </div>
           <div class="floating-skill" data-skill="NumPy">
-            <i class="fab fa-python"></i>
+            <i class="fab fa-python" aria-hidden="true"></i>
             <span>NumPy</span>
           </div>
           <div class="floating-skill" data-skill="Matplotlib">
-            <i class="fas fa-chart-bar"></i>
+            <i class="fas fa-chart-bar" aria-hidden="true"></i>
             <span>Matplotlib</span>
           </div>
           <div class="floating-skill" data-skill="Seaborn">
-            <i class="fas fa-chart-line"></i>
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
             <span>Seaborn</span>
           </div>
           <div class="floating-skill" data-skill="Scikit-learn">
-            <i class="fas fa-brain"></i>
+            <i class="fas fa-brain" aria-hidden="true"></i>
             <span>Scikit-learn</span>
           </div>
           <div class="floating-skill" data-skill="Tableau">
-            <i class="fas fa-chart-pie"></i>
+            <i class="fas fa-chart-pie" aria-hidden="true"></i>
             <span>Tableau</span>
           </div>
           <div class="floating-skill" data-skill="Excel">
-            <i class="fas fa-table"></i>
+            <i class="fas fa-table" aria-hidden="true"></i>
             <span>Excel</span>
           </div>
           <div class="floating-skill" data-skill="Jupyter">
-            <i class="fas fa-book"></i>
+            <i class="fas fa-book" aria-hidden="true"></i>
             <span>Jupyter</span>
           </div>
-
-          <!-- Cloud & DevOps -->
           <div class="floating-skill" data-skill="Docker">
-            <i class="fab fa-docker"></i>
+            <i class="fab fa-docker" aria-hidden="true"></i>
             <span>Docker</span>
           </div>
           <div class="floating-skill" data-skill="Git">
-            <i class="fab fa-git-alt"></i>
+            <i class="fab fa-git-alt" aria-hidden="true"></i>
             <span>Git</span>
           </div>
           <div class="floating-skill" data-skill="GitHub">
-            <i class="fab fa-github"></i>
+            <i class="fab fa-github" aria-hidden="true"></i>
             <span>GitHub</span>
           </div>
           <div class="floating-skill" data-skill="AWS">
-            <i class="fab fa-aws"></i>
+            <i class="fab fa-aws" aria-hidden="true"></i>
             <span>AWS</span>
           </div>
           <div class="floating-skill" data-skill="Linux">
-            <i class="fab fa-linux"></i>
+            <i class="fab fa-linux" aria-hidden="true"></i>
             <span>Linux</span>
           </div>
           <div class="floating-skill" data-skill="REST APIs">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-code" aria-hidden="true"></i>
             <span>REST APIs</span>
           </div>
           <div class="floating-skill" data-skill="Agile">
-            <i class="fas fa-users"></i>
+            <i class="fas fa-users" aria-hidden="true"></i>
             <span>Agile</span>
           </div>
-
-          <!-- Tools -->
           <div class="floating-skill" data-skill="Microsoft Office">
-            <i class="fab fa-microsoft"></i>
+            <i class="fab fa-microsoft" aria-hidden="true"></i>
             <span>Microsoft Office</span>
           </div>
           <div class="floating-skill" data-skill="VS Code">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-code" aria-hidden="true"></i>
             <span>VS Code</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
-        <p class="projects-intro">Selected work where I led or contributed to business analysis, requirements, process design, and stakeholder engagement—focus on problem, stakeholders, constraints, and outcome.</p>
-        <div class="projects-grid">
-          <div class="project-card featured-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-landmark"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Beaccon — Council / Community Platform</h3>
-              <p>
-                <strong>Business problem:</strong> Councils needed a centralised platform for operations and resident engagement.<br>
-                <strong>Stakeholders:</strong> Council clients, operations, delivery team.<br>
-                <strong>Constraints:</strong> Scope, time, and integration with existing processes.<br>
-                <strong>My role:</strong> Requirements gathering, process mapping, gap analysis, trade-off analysis; bridge between business and build.<br>
-                <strong>Outcome:</strong> Platform in production; streamlined workflows and improved engagement. Letterbox Distribution.
-              </p>
-              <div class="project-tech">
-                <span>Requirements Gathering</span>
-                <span>Process Mapping</span>
-                <span>Stakeholder Management</span>
-                <span>Agile</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link" title="Delivered at Letterbox Distribution">
-                  <i class="fas fa-briefcase"></i> Letterbox Distribution
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card featured-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-building"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Internal Office Website</h3>
-              <p>
-                <strong>Business problem:</strong> Scattered information and tools; staff spent time searching for documents and resources.<br>
-                <strong>Stakeholders:</strong> Internal operations, multiple teams.<br>
-                <strong>Constraints:</strong> Time and existing tooling.<br>
-                <strong>My role:</strong> Process analysis, gap identification, requirements and solution structure; acted as bridge between operations and delivery.<br>
-                <strong>Outcome:</strong> Single point of truth for 10–12 staff; reduced time spent locating documents by an estimated 50–80%. Letterbox Distribution.
-              </p>
-              <div class="project-tech">
-                <span>Process Improvement</span>
-                <span>Gap Analysis</span>
-                <span>Requirements Gathering</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link" title="Delivered at Letterbox Distribution">
-                  <i class="fas fa-briefcase"></i> Letterbox Distribution
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card featured-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-brain"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>
-                Noted.AI — Academic Assistant <span class="project-status">🚧 In Progress</span>
-              </h3>
-              <p>
-                <strong>Business problem:</strong> Students need to extract value from large volumes of academic content.<br>
-                <strong>Stakeholders:</strong> End users (students), product owner.<br>
-                <strong>My role:</strong> Requirements, user stories, and solution structure; prioritisation and scope trade-offs.<br>
-                <strong>Outcome:</strong> In progress—focused on learning efficiency and reduced manual effort.
-              </p>
-              <div class="project-tech">
-                <span>User Stories</span>
-                <span>Solution Design</span>
-                <span>Agile</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/note.ai.git"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card featured-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-film"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Movie Recommendation System</h3>
-              <p>
-                <strong>Business problem:</strong> Users overwhelmed by content choice; need relevant recommendations.<br>
-                <strong>Stakeholders:</strong> End users, product context.<br>
-                <strong>My role:</strong> Problem definition, success criteria, and systems analysis for recommendation logic.<br>
-                <strong>Outcome:</strong> Structured approach to recommendation quality and engagement; used for data/analytics insight.
-              </p>
-              <div class="project-tech">
-                <span>Systems Analysis</span>
-                <span>Solution Design</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/Netflix-movie-recommender"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card featured-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-leaf"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Spring Boot Application</h3>
-              <p>
-                <strong>Focus:</strong> Systems analysis and solution design for APIs and integration patterns; understanding of technical constraints to inform business and developer dialogue.
-              </p>
-              <div class="project-tech">
-                <span>Systems Analysis</span>
-                <span>Solution Design</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/spring-boot"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card hidden-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-server"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Server Performance & Monitoring Tool</h3>
-              <p>
-                <strong>Problem:</strong> Limited visibility into system performance.<br>
-                <strong>Solution:</strong> Automated monitoring and analytics.<br>
-                <strong>Impact:</strong> Faster issue diagnosis and improved reliability.
-              </p>
-              <div class="project-tech">
-                <span>Python</span>
-                <span>System Monitoring</span>
-                <span>Analytics</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/server-performance-stats"
-                  class="project-link"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card hidden-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-calendar-alt"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Event Tracker Application</h3>
-              <p>
-                A comprehensive event management system built with modern web
-                technologies, featuring event creation, tracking, and user
-                management capabilities.
-              </p>
-              <div class="project-tech">
-                <span>JavaScript</span>
-                <span>Web Development</span>
-                <span>Event Management</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/Event_app"
-                  class="project-link"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card hidden-project">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <i class="fas fa-hotel"></i>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Hotel Cancellation Prediction</h3>
-              <p>
-                A data science project that predicts hotel booking cancellations
-                using machine learning models to help hotels optimize their
-                booking strategies.
-              </p>
-              <div class="project-tech">
-                <span>Python</span>
-                <span>Data Science</span>
-                <span>Predictive Analytics</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/muiz2353673/Hotel-cancellation-prediction-"
-                  class="project-link"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="projects-actions">
-          <button id="view-more-projects" class="btn btn-secondary">
-            <i class="fas fa-plus" id="toggle-icon"></i>
-            <span id="toggle-text">View More Projects</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Music Section -->
     <section id="music" class="music">
       <div class="container">
-        <h2 class="section-title">Currently Listening</h2>
+        <h2 class="section-title">Currently listening</h2>
         <div class="music-content">
           <div class="music-intro">
             <p>
               Music fuels my creativity and keeps me focused while working.
-              Here's what I'm currently listening to.
+              Here is what I am currently listening to.
             </p>
           </div>
           <div class="current-song">
             <div class="song-card">
               <div class="song-artwork">
-                <i class="fas fa-music"></i>
+                <i class="fas fa-music" aria-hidden="true"></i>
               </div>
               <div class="song-info">
                 <h3>The King's Affirmation</h3>
@@ -723,7 +502,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-spotify"></i>
+                  <i class="fab fa-spotify" aria-hidden="true"></i>
                   Listen on Spotify
                 </a>
               </div>
@@ -733,58 +512,394 @@
       </div>
     </section>
 
-    <!-- Roles I'm Interested In -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Selected projects</h2>
+        <p class="projects-intro">
+          Short summaries below. Read more on each card for security, auth, and monitoring angles: these are design notes and identified risks, not a claim that every control is fully implemented in every repository.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card featured-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-landmark" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Beaccon: council and community platform</h3>
+              <p class="project-lead">
+                Production platform for operations and resident engagement (Letterbox Distribution): requirements, process mapping, and delivery alignment.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Auth:</strong> treat resident and staff roles with least privilege; session and token handling should be explicit in a public-sector context with personal data.
+                  </p>
+                  <p>
+                    <strong>Data:</strong> PII in workflows and exports: who can download what, and how is access audited?
+                  </p>
+                  <p>
+                    <strong>APIs:</strong> rate limiting, abuse, and error signals that would show up in application logs for triage.
+                  </p>
+                  <p>
+                    <strong>Logging:</strong> enough context to trace a user journey without storing unnecessary sensitive payloads in plain text.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Production</span>
+                <span>APIs &amp; data</span>
+                <span>Access &amp; PII</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Delivered at Letterbox Distribution">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> Letterbox Distribution
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card featured-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-building" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Internal office website</h3>
+              <p class="project-lead">
+                Internal hub for 10-12 staff: single place for documents and tools, with an estimated 50-80% reduction in time spent finding resources.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Access:</strong> internal-only: network path, auth, and session timeout assumptions should match how sensitive internal files are.
+                  </p>
+                  <p>
+                    <strong>Data handling:</strong> uploads and search: path traversal, oversharing between teams, and logging of who opened what.
+                  </p>
+                  <p>
+                    <strong>Monitoring:</strong> availability and error rates for the intranet: silent failure is a productivity and trust issue.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Internal tools</span>
+                <span>Access control</span>
+                <span>Search &amp; files</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Delivered at Letterbox Distribution">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> Letterbox Distribution
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card featured-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-brain" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>
+                Noted.AI (academic assistant) <span class="project-status">In progress</span>
+              </h3>
+              <p class="project-lead">
+                Product-style work: requirements, user stories, and scope for a student-focused assistant, with the usual risks for third-party models and data retention.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Data:</strong> what content is sent to external APIs, retention, and deletion; student data is sensitive by default.
+                  </p>
+                  <p>
+                    <strong>Auth:</strong> account lifecycle and session handling for a multi-tenant style product.
+                  </p>
+                  <p>
+                    <strong>Monitoring:</strong> model errors, quota abuse, and cost spikes: operational signals, not only feature flags.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>User stories</span>
+                <span>Scope &amp; risk</span>
+                <span>Third-party AI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/note.ai.git"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card featured-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-film" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Movie recommendation system</h3>
+              <p class="project-lead">
+                Data and ML style project: problem definition, evaluation, and what "good" means for recommendations.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Data:</strong> training data leakage and re-identification in user-behavior-style datasets.
+                  </p>
+                  <p>
+                    <strong>Ops:</strong> batch jobs and model refresh: who can trigger runs, and where are artefacts stored?
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Data science</span>
+                <span>Evaluation</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Netflix-movie-recommender"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card featured-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-leaf" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Spring Boot application</h3>
+              <p class="project-lead">
+                APIs and integration patterns: useful for understanding trust boundaries, auth plug-in points, and failure modes in JVM services.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Auth:</strong> Spring Security configuration: CORS, CSRF, and session or JWT choices matter for API exposure.
+                  </p>
+                  <p>
+                    <strong>Logging:</strong> structured application logs for request id, user id (where appropriate), and error stacks for support and IR.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Java / Spring</span>
+                <span>REST</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/spring-boot"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card hidden-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-server" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Server performance and monitoring tool</h3>
+              <p class="project-lead">
+                Python tooling for system metrics: practice in observability and turning raw stats into something actionable.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Ops:</strong> host metrics, thresholds, and alerting: the same class of data SOC platforms aggregate from endpoints and servers.
+                  </p>
+                  <p>
+                    <strong>Access:</strong> any agent that runs with elevated rights needs tight deployment and update discipline.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Monitoring</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/server-performance-stats"
+                  class="project-link"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card hidden-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Event tracker application</h3>
+              <p class="project-lead">
+                Web app for event creation and user management: classic CRUD and session risks.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Auth:</strong> sign-up, password reset, and role separation for organiser vs attendee views.
+                  </p>
+                  <p>
+                    <strong>Data:</strong> PII in registrations: retention and export for GDPR-style requests.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Web</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Event_app"
+                  class="project-link"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card hidden-project">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-hotel" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Hotel cancellation prediction</h3>
+              <p class="project-lead">
+                ML on booking data: data governance and how models are used in a business context.
+              </p>
+              <details class="read-more-details read-more-details--project">
+                <summary>Read more - security &amp; monitoring</summary>
+                <div class="project-security-block">
+                  <p>
+                    <strong>Data:</strong> personal and payment-adjacent fields: minimisation and access logging for analytics stores.
+                  </p>
+                </div>
+              </details>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>ML</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/muiz2353673/Hotel-cancellation-prediction-"
+                  class="project-link"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-actions">
+          <button type="button" id="view-more-projects" class="btn btn-secondary">
+            <i class="fas fa-plus" id="toggle-icon" aria-hidden="true"></i>
+            <span id="toggle-text">View More Projects</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section id="roles" class="roles">
       <div class="container">
-        <h2 class="section-title">Roles I'm Interested In</h2>
-        <p class="roles-intro">Seeking client-focused roles where I can apply business analysis, stakeholder management, and process improvement:</p>
+        <h2 class="section-title">Roles I am interested in</h2>
+        <p class="roles-intro">
+          UK-based SOC and security operations roles where monitoring, log analysis, incident detection, and clear escalation matter. I am also open to hybrid security-adjacent engineering paths that keep one foot in production reality.
+        </p>
         <div class="roles-grid">
-          <div class="role-card">Associate Business Analyst</div>
-          <div class="role-card">Business Analyst (Client-Focused)</div>
-          <div class="role-card">Technical Business Analyst</div>
-          <div class="role-card">Digital Transformation Analyst</div>
-          <div class="role-card">Requirements / Systems Analyst</div>
-          <div class="role-card">Graduate Business Analyst</div>
+          <div class="role-card">SOC analyst (Tier 1 / entry)</div>
+          <div class="role-card">Security operations centre analyst</div>
+          <div class="role-card">Junior security analyst (operations)</div>
+          <div class="role-card">IT support / NOC to SOC path</div>
+          <div class="role-card">Cloud security (operations-leaning)</div>
+          <div class="role-card">DevSecOps (delivery with security and monitoring)</div>
         </div>
-        <div class="value-list">
-          <h3>How I Add Value</h3>
-          <ul>
-            <li><strong>Stakeholder management</strong> — 10+ workshops, facilitation, and translating business needs into 80+ user stories with acceptance criteria</li>
-            <li><strong>Requirements elicitation & gap analysis</strong> — 50+ requirements documented, 15+ functional gaps closed, AS-IS/TO-BE process mapping for 6+ workflows</li>
-            <li><strong>Bridge between operations and technology</strong> — Technical fluency enabling effective collaboration with engineering teams; 95%+ sprint acceptance rate</li>
-            <li><strong>Process improvement & Agile delivery</strong> — 50–80% reduction in document search time for 10–12 staff; trade-off across scope, cost, time in 2-week sprints</li>
-            <li><strong>Professional and client-ready</strong> — Confident, structured, and UK market appropriate</li>
+        <h3 class="consulting-skills-title" style="margin-top: 1.5rem; margin-bottom: 1rem">What I bring to a team</h3>
+        <div class="value-list" style="max-width: 720px; margin: 0 auto">
+          <ul style="list-style: disc; padding-left: 1.25rem; color: var(--text-muted); line-height: 1.7">
+            <li>
+              <strong>Evidence and triage</strong> - first-line and research roles with written notes, escalation paths, and 90%+ resolution or structured handover where needed.
+            </li>
+            <li>
+              <strong>Engineering context</strong> - APIs, cloud-style deployments, and log-friendly debugging: I know what "normal" can look like in a stack.
+            </li>
+            <li>
+              <strong>Communication</strong> - clear written updates for shift handover; requirements and user-story discipline from software delivery.
+            </li>
+            <li>
+              <strong>Security assessment practice</strong> - Botium case study: controls, gaps, and SOC-relevant visibility, not only policy.
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">Get in touch</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Let's connect</h3>
+            <h3>Let us connect</h3>
             <p>
-              Interested in Associate Business Analyst, Business Analyst (client-focused), and Digital Transformation roles. Open to collaboration and new opportunities—reach out anytime.
+              Interested in UK SOC and security operations opportunities, and in engineering roles with a clear security and monitoring angle. Open to collaboration and conversation: I respond to clear, specific questions about experience and what I am looking for next.
             </p>
             <div class="contact-details">
               <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>London, United Kingdom 🇬🇧</span>
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>London, United Kingdom <span role="img" aria-label="UK">&#127468;&#127463;</span></span>
               </div>
               <div class="contact-item">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
                 <span>muizmunshi@gmail.com</span>
               </div>
               <div class="contact-item">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone" aria-hidden="true"></i>
                 <span>+44 07818307416</span>
               </div>
               <div class="contact-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>BSc (Hons) Computer Science — First Class Honours</span>
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <span>BSc (Hons) Computer Science - First Class Honours</span>
               </div>
             </div>
             <div class="social-links">
@@ -795,7 +910,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
               </a>
               <a
                 href="https://github.com/muiz2353673"
@@ -804,7 +919,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
               <a
                 href="https://muizmunshi.vercel.app"
@@ -813,17 +928,13 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fas fa-globe"></i>
+                <i class="fas fa-globe" aria-hidden="true"></i>
               </a>
-              <a
-                href="mailto:muizmunshi@gmail.com"
-                class="social-link"
-                title="Email"
-              >
-                <i class="fas fa-envelope"></i>
+              <a href="mailto:muizmunshi@gmail.com" class="social-link" title="Email">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
               </a>
               <a href="tel:+4407818307416" class="social-link" title="Phone">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -837,8 +948,9 @@
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Your name"
                 required
+                autocomplete="name"
               />
             </div>
             <div class="form-group">
@@ -846,8 +958,9 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="Your email"
                 required
+                autocomplete="email"
               />
             </div>
             <div class="form-group">
@@ -863,21 +976,22 @@
               <textarea
                 id="message"
                 name="message"
-                placeholder="Your Message"
+                placeholder="Your message"
                 rows="5"
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary">Send message</button>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Abdul Muiz Munshi — Associate Business Analyst (Client-Focused) · Stakeholder Management · Requirements & Process Improvement. All rights reserved.</p>
+        <p>
+          &copy; 2026 Abdul Muiz Munshi. Software engineering with a security and operations (SOC) focus. London, UK. All rights reserved.
+        </p>
       </div>
     </footer>
 

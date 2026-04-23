@@ -1,51 +1,62 @@
 # Hi, I'm Abdul Muiz Munshi
 
-**Software Developer transitioning into Business Analysis**
-*Bridging business needs and technical execution.*
+**Full-stack software engineer** - **security & operations (SOC-oriented)** 
+*I understand how systems are built and deployed; I focus on where they’re weak, what to monitor, and how to reason about risk.*
 
-I work at the intersection of stakeholder requirements, system design, and delivery, helping organisations translate operational challenges into structured digital solutions.
-
----
-
-## What I Focus On
-
-- Requirements gathering & ambiguity reduction
-- Process mapping (AS-IS → TO-BE)
-- Translating business needs into system specifications
-- Supporting Agile delivery cycles
-- Balancing feasibility, cost, and impact
-
-My technical background allows me to collaborate effectively with engineering teams while maintaining a strong business lens.
+London, UK · BSc (Hons) Computer Science (First Class)
 
 ---
 
-## Selected Work
+## What I do
 
-### Beaccon – Council Platform
+I’ve shipped real software: **APIs**, **databases**, and **deployments** using stacks that show up in production (**including AWS and Docker**). I’ve also worked closely with stakeholders - requirements, user stories, process mapping - so I don’t treat security as theory alone; I think about **who can access what**, **what breaks in production**, and **what you’d need in logs** to support triage and investigation.
 
-Led requirements gathering and workflow analysis for a council-facing system. Mapped operational processes, defined user stories, and supported structured delivery.
-
-### Internal Office Portal
-
-Analysed fragmented workflows across the business and designed a centralised internal solution. Adopted by **10–12 employees** as the single source of truth for documents, links, and resources — **reducing time spent searching by an estimated 50–80%** and improving day-to-day operational efficiency.
+I’m targeting **UK SOC and security operations** roles where **monitoring, log analysis, incident detection, and clear escalation** matter.
 
 ---
 
-## Technical Fluency (Enabling Analysis)
+## Security-focused experience
 
-`React` · `Node.js` · `Spring Boot` · `SQL` · `APIs` · `AWS` · `Docker`
-
-Technical depth enables realistic solution design and effective collaboration — not just documentation.
+**Security assessment - Botium Toys (case study)** 
+Structured review across **people, process, and technology** (systems, infrastructure, physical). Key gaps identified included **encryption**, **access control**, **backups**, and **lack of IDS-style network visibility**. Findings mapped to **PCI DSS**, **GDPR**, and **SOC**-type assurance expectations, with **prioritised** recommendations. Directly relevant to SOC work: **telemetry gaps**, **control vs reality**, and **what you’d want to see on a dashboard when things go wrong**.
 
 ---
 
-## Career Direction
+## Security & systems thinking
 
-I'm currently growing toward **Client-Focused Business Analyst / Technical BA** roles, with a long-term interest in digital transformation and product environments.
+- Attack surfaces: **APIs**, **auth**, **sessions**, admin paths 
+- **Least privilege**, separation of duties, access-control risk 
+- **Logging, monitoring**, and **incident-style** questions (what to record, what to alert on) 
+- **AWS**, **Docker**, networking: **misconfiguration and exposure** as part of the picture 
+- **Debugging** habits → **investigation** mindset (evidence, hypotheses, blast radius)
+
+---
+
+## Selected work
+
+### Beaccon - council / community platform
+
+Production platform for operations and resident engagement (Letterbox Distribution). Requirements, process mapping, delivery alignment. *(See portfolio for security considerations and monitoring angles.)*
+
+### Internal office website
+
+Single internal hub for **10-12** staff; estimated **50-80%** reduction in time spent finding documents. *(Access, internal data handling, logging - covered on the site.)*
+
+### Other projects
+
+Spring Boot APIs, Python server monitoring, event tracker, recommender, ML projects, and more on [GitHub](https://github.com/muiz2353673). Each is summarised in the portfolio with **identified risks** and **SOC-style monitoring** notes - not claiming every control is implemented everywhere.
+
+---
+
+## Tech stack (representative)
+
+`Python` · `JavaScript` · `Java` · `SQL` · `React` · `Spring Boot` · `Laravel` · `REST` · `Docker` · `AWS` · `Git` 
+Plus delivery tooling: Jira, Confluence, Miro, Agile/Scrum.
 
 ---
 
 ## Connect
 
-- **LinkedIn:** [linkedin.com/in/abdul-muiz-munshi-6ab4141b8](https://www.linkedin.com/in/abdul-muiz-munshi-6ab4141b8)
-- **Portfolio:** [muizmunshi.vercel.app](https://muizmunshi.vercel.app)
+- **Portfolio:** [muizmunshi.vercel.app](https://muizmunshi.vercel.app) 
+- **LinkedIn:** [linkedin.com/in/abdul-muiz-munshi-6ab4141b8](https://www.linkedin.com/in/abdul-muiz-munshi-6ab4141b8) 
+- **GitHub:** [github.com/muiz2353673](https://github.com/muiz2353673)
