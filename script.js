@@ -8,11 +8,11 @@ console.log("JavaScript is loaded and working!");
 const NAV_SECTIONS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "automation", label: "Automation" },
   { id: "experience", label: "Experience" },
-  { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
-  { id: "music", label: "Music" },
   { id: "projects", label: "Projects" },
+  { id: "roles", label: "Roles" },
   { id: "contact", label: "Contact" },
 ];
 
